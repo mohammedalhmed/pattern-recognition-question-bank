@@ -1,0 +1,2499 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="144 سؤالًا تفاعليًا في تمييز الأنماط، منظمة حسب المحاضرات، مع التصحيح والنتائج."><meta name="theme-color" content="#0d2a3f"><title>بنك أسئلة تمييز الأنماط — ١٤٤ سؤالًا</title>
+<style>
+:root {
+  --bg: #f4f7f9;
+  --paper: #ffffff;
+  --ink: #122b3d;
+  --muted: #5d6e7e;
+  --line: #d8e2e9;
+  --accent: #0b7780;
+  --accent-deep: #075762;
+  --soft: #e9f5f5;
+  --soft-2: #f2f7fa;
+  --good: #147a53;
+  --goodbg: #e8f6ee;
+  --bad: #b4233c;
+  --badbg: #fff0f2;
+  --wait: #8f5c08;
+  --waitbg: #fff6df;
+  --shadow-sm: 0 5px 16px rgba(18, 43, 61, .05);
+  --shadow-md: 0 14px 34px rgba(18, 43, 61, .08);
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(11, 119, 128, .08), transparent 30rem),
+    radial-gradient(circle at 96% 25%, rgba(201, 139, 58, .07), transparent 26rem),
+    var(--bg);
+  color: var(--ink);
+  font: 16px/1.8 Tahoma, "Segoe UI", Arial, sans-serif;
+  text-wrap: pretty;
+}
+button, input, select { font: inherit; }
+button, select {
+  max-width: 100%;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 11px;
+  padding: 10px 15px;
+  transition: transform .16s ease-out, border-color .16s ease-out, background .16s ease-out, box-shadow .16s ease-out;
+}
+button { cursor: pointer; }
+button:hover:not(:disabled) { border-color: var(--accent); background: var(--soft); box-shadow: 0 4px 12px rgba(11, 119, 128, .10); }
+button:active:not(:disabled) { transform: scale(.97); }
+button:disabled { opacity: .45; cursor: default; }
+button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible { outline: 3px solid #d4933a; outline-offset: 3px; }
+.primary { background: var(--accent); color: #fff; border-color: var(--accent); box-shadow: 0 5px 12px rgba(11, 119, 128, .18); }
+.primary:hover:not(:disabled) { background: var(--accent-deep); color: #fff; border-color: var(--accent-deep); }
+.danger { color: var(--bad); }
+main { max-width: 1240px; margin: auto; padding: 30px 24px 38px; }
+header {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 224px;
+  background: linear-gradient(135deg, #0d2a3f 0%, #12475a 62%, #0b7780 125%);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.13);
+  border-radius: 28px;
+  padding: 34px 38px;
+  box-shadow: 0 20px 40px rgba(18, 43, 61, .18);
+}
+header::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  opacity: .25;
+  background-image: linear-gradient(rgba(255,255,255,.12) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+  mask-image: linear-gradient(110deg, black, transparent 70%);
+}
+header::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 60%;
+  top: -92px;
+  width: 330px;
+  height: 330px;
+  border: 1px solid rgba(175,225,226,.35);
+  border-radius: 50%;
+  box-shadow: 0 0 0 34px rgba(175,225,226,.08), 0 0 0 70px rgba(175,225,226,.04);
+}
+header p { color: #d7e7ed; margin: 9px 0 0; max-width: 760px; }
+.eyebrow { color: #afe1e2; font-size: 13px; letter-spacing: .06em; font-weight: 700; }
+h1 { max-width: 720px; font-size: clamp(30px, 4vw, 43px); line-height: 1.35; letter-spacing: -.03em; margin: 5px 0 8px; }
+header p:last-child { display: inline-block; margin-top: 18px; padding: 8px 13px; border: 1px solid rgba(215,231,237,.19); border-radius: 10px; background: rgba(7, 38, 55, .26); font-size: 13px !important; }
+h2 { font-size: 24px; line-height: 1.55; margin: 8px 0; letter-spacing: -.015em; }
+h3 { font-size: 18px; margin: 12px 0; }
+.sub { color: var(--muted); font-size: 13px; }
+.layout { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 22px; margin-top: 22px; align-items: start; }
+aside { position: sticky; top: 20px; align-self: start; }
+.panel { background: rgba(255,255,255,.92); border: 1px solid rgba(216,226,233,.95); border-radius: 20px; padding: 24px; margin-bottom: 18px; box-shadow: var(--shadow-sm); }
+.chapters { display: grid; gap: 8px; }
+.chapter { text-align: right; padding: 11px 13px; display: block; width: 100%; border-radius: 13px; }
+.chapter strong { font-size: 15px; display: block; }
+.chapter small { font-size: 12px; display: block; color: var(--muted); margin-top: 3px; }
+.chapter[aria-current=true] { border: 1px solid var(--accent); background: var(--soft); box-shadow: inset 4px 0 0 var(--accent); }
+.row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.row.spread { justify-content: space-between; }
+.settings { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.settings label { display: grid; gap: 5px; font-size: 13px; color: var(--muted); font-weight: 700; }
+.settings select { width: 100%; font-size: 14px; color: var(--ink); }
+.badge { display: inline-block; background: var(--soft); color: var(--accent-deep); border-radius: 999px; padding: 4px 11px; font-size: 12px; font-weight: 700; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 9px; margin: 17px 0 12px; }
+.stat { background: var(--soft-2); border: 1px solid rgba(216,226,233,.65); border-radius: 13px; text-align: center; padding: 10px 4px; font-size: 12px; }
+.stat b { display: block; font-size: 24px; line-height: 1.45; }
+.stat.correct { color: var(--good); background: var(--goodbg); }
+.stat.wrong { color: var(--bad); background: var(--badbg); }
+.stat.pending { color: var(--wait); background: var(--waitbg); }
+.progress { height: 8px; background: #e3ebf0; border-radius: 99px; overflow: hidden; }
+.progress > div { background: linear-gradient(90deg, var(--accent-deep), var(--accent)); height: 100%; border-radius: inherit; transition: width .2s ease-out; }
+.question-title { font-size: clamp(20px, 2.2vw, 26px); line-height: 1.85; overflow-wrap: anywhere; white-space: pre-line; margin-top: 17px; }
+.options { display: grid; gap: 10px; border: 0; padding: 0; margin: 20px 0; }
+.option { display: flex; align-items: flex-start; gap: 10px; border: 1px solid var(--line); border-radius: 13px; padding: 13px; cursor: pointer; overflow-wrap: anywhere; transition: border-color .16s ease-out, background .16s ease-out, transform .16s ease-out; }
+.option:hover { background: #f5fafb; border-color: #9dcfd0; transform: translateX(-2px); }
+.option.selected { border-color: var(--accent); background: var(--soft); box-shadow: inset 3px 0 0 var(--accent); }
+.option input { flex-shrink: 0; margin: 8px 0 0; accent-color: var(--accent); width: 18px; height: 18px; }
+.option .letter { color: var(--muted); font-size: 13px; min-width: 20px; flex-shrink: 0; }
+.option .option-text { flex: 1; min-width: 0; }
+.option.right { background: var(--goodbg); border-color: var(--good); color: var(--good); }
+.option.wrong { background: var(--badbg); border-color: var(--bad); color: var(--bad); }
+.option .mark { font-size: 18px; font-weight: 700; }
+.feedback { padding: 16px; border-radius: 13px; background: var(--soft); margin: 15px 0; overflow-wrap: anywhere; }
+.feedback.good { background: var(--goodbg); border-right: 4px solid var(--good); }
+.feedback.bad { background: var(--badbg); border-right: 4px solid var(--bad); }
+.feedback p { margin: 6px 0; }
+.question-nav { display: flex; justify-content: space-between; gap: 10px; border-top: 1px solid var(--line); padding-top: 16px; margin-top: 20px; }
+.number-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(44px, 1fr)); gap: 7px; }
+.qnumber { padding: 7px 2px; font-size: 13px; min-height: 42px; }
+.qnumber.current { outline: 2px solid var(--accent); outline-offset: 1px; }
+.qnumber.good { color: var(--good); background: var(--goodbg); }
+.qnumber.bad { color: var(--bad); background: var(--badbg); }
+.qnumber.pending { color: var(--wait); background: var(--waitbg); }
+.note { padding: 12px 15px; border-right: 3px solid var(--accent); background: var(--soft); font-size: 14px; margin: 12px 0; }
+.quiet { background: transparent; font-size: 13px; padding: 6px 9px; }
+.action-grid { display: grid; gap: 8px; margin-top: 15px; }
+.source { font-size: 12px; color: var(--muted); margin-top: 14px; overflow-wrap: anywhere; }
+.nowrap { white-space: nowrap; }
+footer { color: var(--muted); font-size: 12px; margin: 15px 0; padding: 0 8px; }
+.result-summary { font-size: 17px; line-height: 1.9; background: var(--soft); padding: 15px; border-radius: 13px; border: 1px solid #cde6e7; }
+.result-table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 13px; }
+.result-table th, .result-table td { padding: 10px 6px; text-align: center; border-bottom: 1px solid var(--line); }
+.result-table th { background: var(--soft-2); color: var(--muted); font-weight: 700; }
+.result-table th:first-child, .result-table td:first-child { text-align: right; }
+.review-item { padding: 13px 0; border-bottom: 1px solid var(--line); }
+.review-item p { margin: 5px 0; }
+.review-answer { color: var(--good); }
+.review-error { color: var(--bad); }
+details { margin: 12px 0; border-bottom: 1px solid var(--line); padding-bottom: 10px; }
+summary { cursor: pointer; font-weight: 700; padding: 4px 0; }
+.empty { text-align: center; padding: 32px 10px; background: var(--soft-2); border-radius: 13px; color: var(--muted); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+[hidden] { display: none !important; }
+
+@media (max-width: 900px) {
+  main { padding: 20px 16px 30px; }
+  .layout { grid-template-columns: 1fr; }
+  aside { position: static; }
+  .chapters { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .chapter { padding: 10px; }
+  .chapter strong { font-size: 14px; }
+}
+@media (max-width: 560px) {
+  main { padding: 10px 10px 24px; }
+  header { min-height: 0; border-radius: 20px; padding: 23px 19px; }
+  header::after { left: 63%; top: -130px; transform: scale(.75); }
+  h1 { font-size: 28px; }
+  header p:last-child { margin-top: 14px; }
+  .panel { padding: 17px; border-radius: 16px; }
+  .chapters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .settings { grid-template-columns: 1fr 1fr; }
+  .action-grid { grid-template-columns: 1fr; }
+  h2 { font-size: 21px; }
+  .question-title { font-size: 19px; }
+  .result-table { font-size: 11px; }
+  .result-table th, .result-table td { padding: 7px 3px; }
+  .option { padding: 11px 9px; }
+  .question-nav button { font-size: 14px; padding: 8px 10px; }
+  .row.spread { align-items: flex-start; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+}
+</style></head>
+<body><main>
+<header><div class="eyebrow">مراجعة الاختبار • تمييز الأنماط</div><h1>بنك الأسئلة التفاعلي</h1><p>١٤٤ سؤالًا: ٨٦ اختيارًا من متعدد و٥٨ صح أو خطأ، مرتبة حسب المحاضرات ١، ٣، ٤، ٦، ٧، ٨.</p><p style="font-size:14px">أسئلة تدريبية تغطي المرفقات، وليست أسئلة رسمية أو ضمانًا لما سيأتي في الاختبار. تتضمن حسابات من المحاضرات وتطبيقات مماثلة موضّحة بالمراجع.</p></header>
+<noscript><div class="panel">فعّل JavaScript في المتصفح لتشغيل الأسئلة والتصحيح. لا يحتاج الملف إلى الإنترنت.</div></noscript>
+<div class="layout">
+<aside><div class="panel"><h2 style="font-size:19px">المحاضرات بالترتيب</h2><nav id="chapters" class="chapters" aria-label="اختيار المحاضرة"></nav><div class="action-grid"><button id="all-results">تصحيح الكل والنتيجة</button><button id="reset-current" class="danger">إعادة المحاضرة الحالية</button></div><p class="sub" id="save-status" role="status"></p></div></aside>
+<div>
+<section id="results" class="panel" hidden aria-labelledby="results-title"><div class="row spread"><h2 id="results-title">النتيجة والتصحيح</h2><button id="close-results">عودة للأسئلة</button></div><div id="results-body"></div></section>
+<section class="panel" aria-labelledby="chapter-title"><div class="row spread"><div><span class="badge" id="chapter-kicker"></span><h2 id="chapter-title"></h2><div class="sub" id="chapter-focus"></div></div><span id="overall-progress" class="badge"></span></div>
+<div class="stats" id="stats" aria-live="polite"></div><div class="progress" id="progress" role="progressbar" aria-label="نسبة الأسئلة المجاب عنها في المحاضرة" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="progress-bar"></div></div>
+<div class="settings" style="margin-top:16px"><label for="mode">طريقة الحل<select id="mode"><option value="practice">تدريب — تصحيح فوري بعد التأكيد</option><option value="exam">اختبار — تصحيح عند عرض النتيجة</option></select></label><label for="type-filter">نوع الأسئلة<select id="type-filter"><option value="all">الاختيارات والصح والخطأ</option><option value="mc">اختيار من متعدد فقط</option><option value="tf">صح أو خطأ فقط</option></select></label></div>
+<div class="row" style="margin-top:12px"><button id="wrong-filter" class="quiet" aria-pressed="false">مراجعة الأخطاء فقط</button><button id="chapter-results" class="primary">تصحيح المحاضرة وعرض النتيجة</button></div><div class="sub" id="mode-note" style="margin-top:10px"></div>
+</section>
+<section class="panel" id="question-panel" aria-labelledby="question-text"><div id="empty" class="empty" hidden></div><div id="question-content"><div class="row spread"><span id="question-counter" class="badge"></span><span id="question-topic" class="sub"></span></div><h2 id="question-text" class="question-title" tabindex="-1"></h2><fieldset id="options" class="options" aria-labelledby="question-text"></fieldset><div class="row"><button id="check" class="primary">تأكيد الإجابة وتصحيحها</button><span id="choice-status" class="sub" role="status"></span></div><div id="feedback" class="feedback" hidden aria-live="polite"></div><div id="source" class="source"></div><div class="question-nav"><button id="previous">السؤال السابق</button><button id="next" class="primary">السؤال التالي</button></div></div></section>
+<section class="panel"><h3>انتقل إلى سؤال</h3><p class="sub">✓ صحيح · × خطأ · ● إجابة لم تُصحّح بعد · الرقم وحده: لم تُجب.</p><div id="numbers" class="number-grid" aria-label="أرقام أسئلة المحاضرة"></div></section>
+<section class="panel"><details><summary>طريقة الاستخدام والملاحظات</summary><ul><li>اختر المحاضرة، ثم الإجابة. في التدريب اضغط «تأكيد الإجابة وتصحيحها»؛ وفي الاختبار تُحفظ اختياراتك حتى عرض النتيجة.</li><li>يمكن تغيير الاختيار قبل تصحيحه. بعد التصحيح تُثبّت الإجابة لتبقى النتيجة واضحة، ويمكن إعادة المحاضرة لبدء محاولة جديدة.</li><li>الدرجة محسوبة من إجمالي أسئلة المحاضرة؛ الأسئلة غير المجاب عنها تبقى منفصلة عن الأخطاء، وتُعرض أيضًا دقة إجاباتك المصحّحة.</li><li>زر النتيجة يصحّح الإجابات المسجّلة فقط. وفي نموذج الإجابة يمكنك رؤية حل الأسئلة التي لم تُجب عنها، دون احتسابها صحيحة.</li><li>الحفظ التلقائي مرتبط بهذا المتصفح وهذا الملف إذا سمح المتصفح بالتخزين المحلي. لا تُرسل بياناتك إلى أي جهة.</li><li>الأسئلة مبنية على المحاضرات الست المرفقة فقط. لم تُرفق المحاضرتان ٢ و٥.</li><li>في المحاضرة ٧، ص١٣، السطر الذي يذكر تكرار الدرجة 3 بأنه 4 خطأ مطبعي؛ العد الصحيح والمتجه النهائي يعطيان 3.</li><li>مثال Random Forest في المحاضرة ٦ تبسيط قائم على عتبات وتصويت. وفي المحاضرة ٤ استخدام التشابه كإمكان افتراض خاص بالمثال.</li></ul></details></section>
+</div></div><footer>أرقام الصفحات تشير إلى ترتيب صفحات ملفات PDF المرفقة. لا اتصال بالإنترنت ولا تسجيل دخول مطلوب بعد تنزيل هذا الملف.</footer>
+</main>
+<script>
+'use strict';
+const BANK=[
+  {
+    "number": 1,
+    "title": "مقدمة في الأنماط",
+    "file": "المحاضرة 1. مقدمة في الانماط.pdf",
+    "focus": "النمط والسمة، التصنيف والتجميع، الإدراك والتطبيقات",
+    "questions": [
+      {
+        "type": "mc",
+        "q": "أي وصف يعرّف النمط Pattern؟",
+        "options": [
+          "خوارزمية تختار أصغر مسافة فقط",
+          "كائن أو حدث أو ملاحظة توصف بخصائص قابلة للقياس",
+          "اسم فئة لا يرتبط بخصائص قابلة للقياس",
+          "القرار النهائي الصادر من المصنف فقط"
+        ],
+        "answer": 1,
+        "explanation": "النمط هو ما ندرسه، ويمكن وصفه بسمات قابلة للقياس، مثل صورة وجه أو إشارة صوتية.",
+        "pages": "9",
+        "topic": "المفاهيم",
+        "id": "L1-01",
+        "number": 1
+      },
+      {
+        "type": "mc",
+        "q": "في مثال صورة السمكة، أي مما يلي يمثل سمة Feature؟",
+        "options": [
+          "اسم الفئة النهائية",
+          "مجموعة الصور كلها",
+          "خوارزمية التصنيف",
+          "طول السمكة"
+        ],
+        "answer": 3,
+        "explanation": "الطول خاصية قابلة للقياس؛ صورة السمكة هي العينة، والنوع هو الفئة.",
+        "pages": "9",
+        "topic": "المفاهيم",
+        "id": "L1-02",
+        "number": 2
+      },
+      {
+        "type": "mc",
+        "q": "ما المهمة عندما تكون الفئات معروفة ونريد إسناد عينة إلى الفئة المناسبة؟",
+        "options": [
+          "التجميع Clustering",
+          "التصنيف Classification",
+          "تحسين التباين",
+          "التجزئة Segmentation"
+        ],
+        "answer": 1,
+        "explanation": "التصنيف يحدد فئة مناسبة من فئات معروفة مسبقًا.",
+        "pages": "12–13",
+        "topic": "التصنيف والتجميع",
+        "id": "L1-03",
+        "number": 3
+      },
+      {
+        "type": "mc",
+        "q": "صور بلا تسميات جُمعت حسب التشابه. ما العملية؟",
+        "options": [
+          "التجميع Clustering",
+          "اختبار مصنف بتسميات صحيحة",
+          "التصنيف بفئات معلومة",
+          "التعرف على هوية مسماة"
+        ],
+        "answer": 0,
+        "explanation": "التجميع يكتشف المجموعات من البيانات دون إعطاء تسميات الفئات مسبقًا.",
+        "pages": "12–14",
+        "topic": "التصنيف والتجميع",
+        "id": "L1-04",
+        "number": 4
+      },
+      {
+        "type": "mc",
+        "q": "ما الترتيب الذي تعرضه المحاضرة للتمييز في الذكاء الاصطناعي؟",
+        "options": [
+          "الإدراك، المعالجة، التنبؤ",
+          "التنبؤ، المعالجة، الإدراك",
+          "المعالجة، التنبؤ، الإدراك",
+          "الإدراك، التنبؤ، المعالجة"
+        ],
+        "answer": 0,
+        "explanation": "نستقبل البيانات أولًا، ثم نحللها، ثم نصدر قرارًا أو تنبؤًا.",
+        "pages": "20",
+        "topic": "المراحل",
+        "id": "L1-05",
+        "number": 5
+      },
+      {
+        "type": "mc",
+        "q": "تسجيل الميكروفون للصوت قبل تحليله يمثل أساسًا أي مرحلة؟",
+        "options": [
+          "الإدراك",
+          "القرار النهائي",
+          "التصنيف الناتج",
+          "التنبؤ"
+        ],
+        "answer": 0,
+        "explanation": "الإدراك يستقبل البيانات من العالم عبر مستشعر، مثل الميكروفون أو الكاميرا.",
+        "pages": "20",
+        "topic": "المراحل",
+        "id": "L1-06",
+        "number": 6
+      },
+      {
+        "type": "mc",
+        "q": "تحليل الخصائص المهمة في الصورة يندرج أساسًا تحت أي مرحلة؟",
+        "options": [
+          "الإدراك وحده",
+          "التنبؤ النهائي",
+          "عرض نتيجة الهوية",
+          "المعالجة"
+        ],
+        "answer": 3,
+        "explanation": "المعالجة تشمل تحليل البيانات وتمييز الأنماط والخصائص المهمة.",
+        "pages": "20",
+        "topic": "المراحل",
+        "id": "L1-07",
+        "number": 7
+      },
+      {
+        "type": "mc",
+        "q": "ما المدخل والمخرج المعتادان في التعرف الضوئي على الحروف OCR؟",
+        "options": [
+          "صورة ثم مواضع وجوه",
+          "نص ثم إشارة صوتية",
+          "صورة كتابة ثم نص",
+          "بصمة ثم هوية"
+        ],
+        "answer": 2,
+        "explanation": "OCR يتعرف على الحروف الموجودة في صورة ويحولها إلى نص.",
+        "pages": "23",
+        "topic": "التطبيقات",
+        "id": "L1-08",
+        "number": 8
+      },
+      {
+        "type": "mc",
+        "q": "ما التطبيق الذي يحوّل الكلام المسجّل إلى كلمات مكتوبة؟",
+        "options": [
+          "التعرف على الكلام",
+          "التعرف على التوقيع",
+          "كشف الوجوه",
+          "التعرف على بصمة الإصبع"
+        ],
+        "answer": 0,
+        "explanation": "التعرف على الكلام يستخدم الإشارة الصوتية لإنتاج كلمات أو نص.",
+        "pages": "24",
+        "topic": "التطبيقات",
+        "id": "L1-09",
+        "number": 9
+      },
+      {
+        "type": "mc",
+        "q": "ما المخرج المذكور لكشف الوجوه داخل صورة؟",
+        "options": [
+          "نسخة مطابقة من الصوت",
+          "مواقع الوجوه في الصورة",
+          "أرقام بصمات الأصابع",
+          "أسماء أصحاب الوجوه بالضرورة"
+        ],
+        "answer": 1,
+        "explanation": "كشف الوجوه يحدد أماكنها؛ معرفة هوية أصحابها مهمة أخرى.",
+        "pages": "27",
+        "topic": "التطبيقات",
+        "id": "L1-10",
+        "number": 10
+      },
+      {
+        "type": "mc",
+        "q": "الكلام والصوت من أمثلة أي نوع مذكور في المحاضرة؟",
+        "options": [
+          "حدود القرار الخطية",
+          "الأنماط المرئية الساكنة فقط",
+          "الأنماط الزمنية",
+          "مجموعات التدريب"
+        ],
+        "answer": 2,
+        "explanation": "تتغير الإشارات الصوتية عبر الزمن، ولذلك تعد من الأنماط الزمنية.",
+        "pages": "10",
+        "topic": "أنواع الأنماط",
+        "id": "L1-11",
+        "number": 11
+      },
+      {
+        "type": "mc",
+        "q": "ما الفائدة الأساسية لتمييز الأنماط في التطبيقات الذكية؟",
+        "options": [
+          "ضمان انعدام الأخطاء في كل تطبيق",
+          "حصر معالجة المعلومات في الصور",
+          "أتمتة التعرف والتصنيف اعتمادًا على البيانات",
+          "إلغاء الحاجة إلى تمثيل البيانات"
+        ],
+        "answer": 2,
+        "explanation": "تمييز الأنماط يدعم مهام التعرف والتصنيف واتخاذ القرار في تطبيقات ذكية كثيرة.",
+        "pages": "29–30",
+        "topic": "الأهمية",
+        "id": "L1-12",
+        "number": 12
+      },
+      {
+        "type": "tf",
+        "q": "خصائص النمط القابلة للقياس تسمّى سمات.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "السمات هي الخصائص التي تصف النمط وتساعد على التمييز بين الأنماط.",
+        "pages": "9",
+        "topic": "المفاهيم",
+        "id": "L1-13",
+        "number": 13
+      },
+      {
+        "type": "tf",
+        "q": "تمييز الأنماط يقتصر على الصور ولا يشمل الصوت أو النصوص.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 1,
+        "explanation": "يمكن أن تكون الأنماط صورًا أو أصواتًا أو نصوصًا أو إشارات أخرى.",
+        "pages": "9،17،33",
+        "topic": "المفاهيم",
+        "id": "L1-14",
+        "number": 14
+      },
+      {
+        "type": "tf",
+        "q": "في التصنيف تكون الفئات معروفة مسبقًا.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "المهمة في التصنيف هي تحديد الفئة المناسبة للعينة من الفئات المعروفة.",
+        "pages": "12",
+        "topic": "التصنيف والتجميع",
+        "id": "L1-15",
+        "number": 15
+      },
+      {
+        "type": "tf",
+        "q": "يشترط التجميع إعطاء اسم الفئة الصحيح لكل عينة قبل البدء.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 1,
+        "explanation": "التجميع يكتشف المجموعات من التشابه دون تسميات مسبقة للفئات.",
+        "pages": "12–13",
+        "topic": "التصنيف والتجميع",
+        "id": "L1-16",
+        "number": 16
+      },
+      {
+        "type": "tf",
+        "q": "إصدار قرار بأن الرسالة مزعجة مثال على مرحلة التنبؤ.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "بعد استقبال البيانات ومعالجتها، يصدر النظام قرارًا متعلقًا بالفئة.",
+        "pages": "20",
+        "topic": "المراحل",
+        "id": "L1-17",
+        "number": 17
+      },
+      {
+        "type": "tf",
+        "q": "التعرف على بصمات الأصابع من تطبيقات تمييز الأنماط.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "تستخدم خصائص البصمة للمساعدة على تحديد هوية الشخص.",
+        "pages": "25",
+        "topic": "التطبيقات",
+        "id": "L1-18",
+        "number": 18
+      },
+      {
+        "type": "tf",
+        "q": "اكتشاف وجود وجه في الصورة يعني بالضرورة معرفة اسم صاحبه.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 1,
+        "explanation": "كشف الوجه يحدد وجوده أو موقعه؛ التعرف على الهوية يتطلب خطوة أخرى.",
+        "pages": "27",
+        "topic": "التطبيقات",
+        "id": "L1-19",
+        "number": 19
+      },
+      {
+        "type": "tf",
+        "q": "تسمّي المحاضرة فئة من الأنماط «الأنماط المنطقية»، وتذكر الأحرف والسلاسل ضمن أمثلتها.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "هذا هو التقسيم الوارد في المحاضرة؛ وقد تتداخل أمثلة الأنواع بحسب طريقة تمثيل البيانات.",
+        "pages": "10",
+        "topic": "أنواع الأنماط",
+        "id": "L1-20",
+        "number": 20
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "استخراج السمات",
+    "file": "المحاضرة 3. إستخراج السمات (2).pdf",
+    "focus": "المتجه والفضاء، مثال الأسماك، التعميم، دورة التصميم والتحديات",
+    "questions": [
+      {
+        "type": "mc",
+        "q": "أي عبارة تصف العينة Sample؟",
+        "options": [
+          "جميع الفئات الممكنة معًا",
+          "مثال واحد نريد التعرف عليه أو تصنيفه",
+          "عدد مرات تحديث النموذج",
+          "الحد الفاصل بين فئتين"
+        ],
+        "answer": 1,
+        "explanation": "العينة مثال مفرد، مثل بصمة شخص أو صورة سمكة.",
+        "pages": "7",
+        "topic": "المفاهيم",
+        "id": "L3-01",
+        "number": 1
+      },
+      {
+        "type": "mc",
+        "q": "ما وظيفة مجموعة التدريب Training Set؟",
+        "options": [
+          "تدريب المصنف على أمثلة البيانات",
+          "تحديد عدد أبعاد المتجه دائمًا",
+          "إلغاء الحاجة إلى السمات",
+          "قياس التعميم دون أي تعلم منها"
+        ],
+        "answer": 0,
+        "explanation": "مجموعة التدريب تُستخدم لتعلم النموذج؛ أما الاختبار فيقيّم أداءه على عينات مستقلة.",
+        "pages": "7–8",
+        "topic": "التدريب والاختبار",
+        "id": "L3-02",
+        "number": 2
+      },
+      {
+        "type": "mc",
+        "q": "أي بيانات نستخدم لتقييم الأداء على عينات لم تُستخدم في التدريب؟",
+        "options": [
+          "الأمثلة التي حفظها النموذج فقط",
+          "مجموعة اختبار مستقلة",
+          "مراكز المجموعات وحدها",
+          "مجموعة التدريب نفسها فقط"
+        ],
+        "answer": 1,
+        "explanation": "الاستقلال عن التدريب يجعل الاختبار مناسبًا لتقدير الأداء على بيانات جديدة.",
+        "pages": "8",
+        "topic": "التدريب والاختبار",
+        "id": "L3-03",
+        "number": 3
+      },
+      {
+        "type": "mc",
+        "q": "متجه سمات يحتوي الطول والعرض والسطوع. ما عدد أبعاده؟",
+        "options": [
+          "عدد عينات التدريب",
+          "2",
+          "1",
+          "3"
+        ],
+        "answer": 3,
+        "explanation": "عدد الأبعاد يساوي عدد السمات في متجه العينة، وهنا ثلاث سمات.",
+        "pages": "9",
+        "topic": "المتجه والفضاء",
+        "id": "L3-04",
+        "number": 4
+      },
+      {
+        "type": "mc",
+        "q": "ما المقصود بفضاء السمات Feature Space؟",
+        "options": [
+          "مصفوفة أخطاء التصنيف فقط",
+          "قائمة أسماء الخوارزميات",
+          "فضاء تمثَّل فيه العينات وفق قيم سماتها",
+          "اسم ذاكرة حفظ الصور"
+        ],
+        "answer": 2,
+        "explanation": "كل عينة تمثل نقطة في فضاء تحدد محاوره السمات المستخدمة.",
+        "pages": "10",
+        "topic": "المتجه والفضاء",
+        "id": "L3-05",
+        "number": 5
+      },
+      {
+        "type": "mc",
+        "q": "ما وظيفة حد القرار Decision Boundary؟",
+        "options": [
+          "الفصل بين مناطق الفئات في فضاء السمات",
+          "حفظ جميع البكسلات بالترتيب",
+          "تحديد سعة الذاكرة المتاحة",
+          "حساب عدد عينات التدريب فقط"
+        ],
+        "answer": 0,
+        "explanation": "حد القرار يفصل المناطق التي تُنسب إلى الفئات المختلفة.",
+        "pages": "11",
+        "topic": "حدود القرار",
+        "id": "L3-06",
+        "number": 6
+      },
+      {
+        "type": "mc",
+        "q": "فصل السمكة عن الخلفية وعن الأسماك الأخرى يسمى ماذا؟",
+        "options": [
+          "التصويت Voting",
+          "اختيار النموذج",
+          "الانحدار Regression",
+          "التجزئة Segmentation"
+        ],
+        "answer": 3,
+        "explanation": "التجزئة تعزل الكائن أو الجزء المطلوب من البيانات.",
+        "pages": "14",
+        "topic": "المعالجة والتجزئة",
+        "id": "L3-07",
+        "number": 7
+      },
+      {
+        "type": "mc",
+        "q": "لماذا لم يكن الطول وحده كافيًا جيدًا لفصل نوعي الأسماك في المثال؟",
+        "options": [
+          "وجود تداخل كبير بين أطوال النوعين",
+          "لأن الطول ليس خاصية قابلة للقياس",
+          "لأن المصنف لا يقبل سمة واحدة مطلقًا",
+          "لأن الفئتين لا تحتويان عينات"
+        ],
+        "answer": 0,
+        "explanation": "تداخل توزيعي الطول بين الفئتين يسبب أخطاء عند الاعتماد على الطول وحده.",
+        "pages": "15–17",
+        "topic": "مثال الأسماك",
+        "id": "L3-08",
+        "number": 8
+      },
+      {
+        "type": "mc",
+        "q": "ما الهدف الأساسي من بناء المصنف؟",
+        "options": [
+          "أداء جيد على بيانات جديدة",
+          "تعقيد حد القرار إلى أقصى درجة",
+          "استخدام أكبر عدد سمات دائمًا",
+          "حفظ التدريب فقط مهما ضعف الاختبار"
+        ],
+        "answer": 0,
+        "explanation": "الهدف هو التعميم: نجاح النموذج مع عينات لم تُستخدم في التدريب.",
+        "pages": "19–20",
+        "topic": "التعميم",
+        "id": "L3-09",
+        "number": 9
+      },
+      {
+        "type": "mc",
+        "q": "نموذج دقته 99% في التدريب و55% في الاختبار. ما المشكلة المرجحة؟",
+        "options": [
+          "غياب بيانات التدريب",
+          "تطبيع مثالي بالضرورة",
+          "الإفراط في التوافق Overfitting",
+          "تعميم ممتاز"
+        ],
+        "answer": 2,
+        "explanation": "الفجوة الكبيرة تشير إلى تعلّم تفاصيل التدريب على حساب التعميم؛ ليست دقة التدريب وحدها دليل نجاح.",
+        "pages": "40",
+        "topic": "التعميم",
+        "id": "L3-10",
+        "number": 10
+      },
+      {
+        "type": "mc",
+        "q": "أي صفة نفضّلها في السمات الجيدة؟",
+        "options": [
+          "عدم إمكانية قياسها",
+          "تغير عشوائي مع كل قياس",
+          "تقارب داخل الفئة واختلاف بين الفئات",
+          "اختلاف كبير داخل الفئة وتشابه بين الفئات"
+        ],
+        "answer": 2,
+        "explanation": "السمات الجيدة تساعد على جمع أمثلة الفئة نفسها وفصلها عن الفئات الأخرى.",
+        "pages": "36–37",
+        "topic": "جودة السمات",
+        "id": "L3-11",
+        "number": 11
+      },
+      {
+        "type": "mc",
+        "q": "أي ترتيب يطابق دورة تصميم نظام تمييز الأنماط؟",
+        "options": [
+          "جمع البيانات، اختيار السمات، اختيار النموذج، التدريب، التقييم",
+          "التدريب، القرار النهائي، التجزئة، جمع البيانات، التقييم",
+          "اختيار النموذج، التقييم، التدريب، حذف البيانات، اختيار السمات",
+          "التقييم، التدريب، جمع البيانات، اختيار النموذج، اختيار السمات"
+        ],
+        "answer": 0,
+        "explanation": "هذه هي مراحل دورة التصميم المذكورة، ويمكن تكرارها لتحسين الأداء.",
+        "pages": "28–29",
+        "topic": "دورة التصميم",
+        "id": "L3-12",
+        "number": 12
+      },
+      {
+        "type": "mc",
+        "q": "التشوه غير المقصود الناتج عن حساس أو ظروف تصوير يسمى ماذا؟",
+        "options": [
+          "الضوضاء Noise",
+          "السياق Context",
+          "التعميم Generalization",
+          "التصنيف Classification"
+        ],
+        "answer": 0,
+        "explanation": "الضوضاء تغيرات لا تمثل النمط الحقيقي وقد تضعف جودة السمات والتصنيف.",
+        "pages": "32",
+        "topic": "التحديات",
+        "id": "L3-13",
+        "number": 13
+      },
+      {
+        "type": "mc",
+        "q": "ما أحد الأساليب المذكورة للتعامل مع سمة مفقودة؟",
+        "options": [
+          "تقديرها بمتوسطها في بيانات التدريب",
+          "حذف تسميات جميع العينات",
+          "افتراض أن قيمتها صفر صحيحة دائمًا",
+          "تحويل كل البيانات إلى الفئة الأولى"
+        ],
+        "answer": 0,
+        "explanation": "يمكن استخدام متوسط التدريب أو طريقة تقدير مناسبة؛ الصفر ليس تعويضًا صحيحًا دائمًا.",
+        "pages": "38",
+        "topic": "التحديات",
+        "id": "L3-14",
+        "number": 14
+      },
+      {
+        "type": "mc",
+        "q": "معرفة أن الحرف الغامض يقع داخل كلمة معينة تساعد على تفسيره. ما المفهوم؟",
+        "options": [
+          "السياق Context",
+          "الضوضاء Noise",
+          "التعقيد الحسابي",
+          "عدد الأبعاد"
+        ],
+        "answer": 0,
+        "explanation": "السياق هو المعلومات المحيطة التي تساعد على فهم النمط أو جزء منه.",
+        "pages": "41",
+        "topic": "التحديات",
+        "id": "L3-15",
+        "number": 15
+      },
+      {
+        "type": "mc",
+        "q": "دمج أكثر من مصنف لحل المهمة نفسها يسمى ماذا؟",
+        "options": [
+          "Missing Features",
+          "Feature Space",
+          "Classifier Ensemble",
+          "Segmentation"
+        ],
+        "answer": 2,
+        "explanation": "دمج المصنفات يجمع قرارات أو مخرجات عدة مصنفات بهدف تحسين الأداء.",
+        "pages": "42",
+        "topic": "التحديات",
+        "id": "L3-16",
+        "number": 16
+      },
+      {
+        "type": "mc",
+        "q": "ما المقصود بالمخاطرة Risk في اتخاذ القرار؟",
+        "options": [
+          "زمن تحميل الملف فقط",
+          "عدد السمات في المتجه",
+          "مجموع أبعاد الصور",
+          "التكلفة المتوقعة الناتجة عن القرار"
+        ],
+        "answer": 3,
+        "explanation": "تراعي المخاطرة التكلفة المتوقعة، لأن الأخطاء ليست متساوية الضرر دائمًا.",
+        "pages": "43",
+        "topic": "التكاليف والمخاطر",
+        "id": "L3-17",
+        "number": 17
+      },
+      {
+        "type": "mc",
+        "q": "أي مهمة ترتبط بالانحدار Regression؟",
+        "options": [
+          "فصل كائن عن خلفية",
+          "تجميع عينات بلا أسماء فقط",
+          "إسناد صورة إلى اسم فئة فقط",
+          "التنبؤ بقيمة عددية مثل سعر منزل"
+        ],
+        "answer": 3,
+        "explanation": "الانحدار يربط المدخل بقيمة عددية، بخلاف اختيار فئة منفصلة في التصنيف.",
+        "pages": "23",
+        "topic": "المجالات المرتبطة",
+        "id": "L3-18",
+        "number": 18
+      },
+      {
+        "type": "mc",
+        "q": "ما الذي يميز معالجة الصور عن تصنيف الصور في المثال المفاهيمي؟",
+        "options": [
+          "لا تتعامل مع بيانات رقمية",
+          "لا يمكن أن تقلل الضوضاء",
+          "يجب أن تنتج اسم فئة دائمًا",
+          "قد تحوّل صورة إلى صورة محسّنة"
+        ],
+        "answer": 3,
+        "explanation": "معالجة الصور قد تحسن الصورة أو تعدّلها، بينما التصنيف ينتج فئة.",
+        "pages": "22",
+        "topic": "المجالات المرتبطة",
+        "id": "L3-19",
+        "number": 19
+      },
+      {
+        "type": "mc",
+        "q": "ما العملية التي تهدف إلى تقدير دالة الكثافة الاحتمالية للفئات؟",
+        "options": [
+          "Associative Memory",
+          "Classifier Ensemble",
+          "Density Estimation",
+          "Segmentation"
+        ],
+        "answer": 2,
+        "explanation": "تقدير الكثافة يبني وصفًا احتماليًا لتوزيع البيانات، وقد يُستخدم في التصنيف.",
+        "pages": "24",
+        "topic": "المجالات المرتبطة",
+        "id": "L3-20",
+        "number": 20
+      },
+      {
+        "type": "tf",
+        "q": "عدد أبعاد متجه السمات يساوي دائمًا عدد صور التدريب.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 1,
+        "explanation": "عدد الأبعاد يساوي عدد السمات، بينما عدد صور التدريب هو عدد العينات.",
+        "pages": "9",
+        "topic": "المتجه والفضاء",
+        "id": "L3-21",
+        "number": 21
+      },
+      {
+        "type": "tf",
+        "q": "قد يكون حد القرار خطيًا أو تربيعيًا أو أكثر تعقيدًا.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "تعرض المحاضرة أشكالًا مختلفة لحدود القرار بحسب توزيع البيانات والنموذج.",
+        "pages": "11",
+        "topic": "حدود القرار",
+        "id": "L3-22",
+        "number": 22
+      },
+      {
+        "type": "tf",
+        "q": "الحد الذي يصنف بيانات التدريب تمامًا هو بالضرورة الأفضل للعينات الجديدة.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 1,
+        "explanation": "قد يكون الحد شديد التعقيد ويفرط في التوافق، فيضعف التعميم.",
+        "pages": "19–20،40",
+        "topic": "التعميم",
+        "id": "L3-23",
+        "number": 23
+      },
+      {
+        "type": "tf",
+        "q": "إزالة الضوضاء وضبط الإضاءة من أمثلة المعالجة المسبقة.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "تُجهّز هذه العمليات الصورة قبل استخراج السمات واتخاذ القرار.",
+        "pages": "14",
+        "topic": "المعالجة والتجزئة",
+        "id": "L3-24",
+        "number": 24
+      },
+      {
+        "type": "tf",
+        "q": "جمع البيانات الجيدة قد يمثل جزءًا كبيرًا من تكلفة بناء النظام.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "تؤكد المحاضرة أهمية جمع البيانات وتكلفته وتمثيل البيانات للحالات المطلوبة.",
+        "pages": "29،34",
+        "topic": "التحديات",
+        "id": "L3-25",
+        "number": 25
+      },
+      {
+        "type": "tf",
+        "q": "معرفة المجال تعني الاستفادة من خبرة سابقة بالمشكلة أو بطريقة توليد الأنماط.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "يمكن للمعرفة السابقة أن تساعد خاصة عندما تكون بيانات التدريب غير كافية.",
+        "pages": "35",
+        "topic": "التحديات",
+        "id": "L3-26",
+        "number": 26
+      },
+      {
+        "type": "tf",
+        "q": "الأفضل دائمًا استخدام نموذج واحد بعينه لجميع أنواع البيانات.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 1,
+        "explanation": "اختيار النموذج يعتمد على طبيعة البيانات والتطبيق والتقييم؛ لا يناسب نموذج واحد كل الحالات.",
+        "pages": "39",
+        "topic": "التحديات",
+        "id": "L3-27",
+        "number": 27
+      },
+      {
+        "type": "tf",
+        "q": "يمكن تمثيل الأنماط بمتجهات سمات أو ببنى وعلاقات أو بقواعد.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "تذكر المحاضرة التمثيل الإحصائي والتمثيل البنيوي أو التركيبي ضمن طرق تمثيل الأنماط.",
+        "pages": "37",
+        "topic": "التحديات",
+        "id": "L3-28",
+        "number": 28
+      },
+      {
+        "type": "tf",
+        "q": "Bagging وBoosting من طرق دمج المصنفات المذكورة.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "تذكر المحاضرة أيضًا Random Subspace وMixture of Experts.",
+        "pages": "42",
+        "topic": "التحديات",
+        "id": "L3-29",
+        "number": 29
+      },
+      {
+        "type": "tf",
+        "q": "التعقيد الحسابي يهتم بالدقة وحدها ولا يهتم بالزمن أو الذاكرة.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 1,
+        "explanation": "يراعي عدد السمات والعينات والفئات والخوارزمية، وما يترتب على ذلك من زمن وذاكرة.",
+        "pages": "44",
+        "topic": "التحديات",
+        "id": "L3-30",
+        "number": 30
+      },
+      {
+        "type": "tf",
+        "q": "الذاكرة الترابطية تهدف إلى استرجاع نمط اعتمادًا على جزء من معلوماته.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "تربط المعلومات الجزئية بالنمط الكامل أو المطلوب استرجاعه.",
+        "pages": "23",
+        "topic": "المجالات المرتبطة",
+        "id": "L3-31",
+        "number": 31
+      },
+      {
+        "type": "tf",
+        "q": "الاستيفاء Interpolation يستخدم نقاطًا معلومة لتقدير قيم بينية غير معطاة.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "تصف المحاضرة الاستيفاء بتقدير نقاط أو قيم جديدة اعتمادًا على النقاط المتاحة.",
+        "pages": "23",
+        "topic": "المجالات المرتبطة",
+        "id": "L3-32",
+        "number": 32
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "نظرية القرار البايزية",
+    "file": "المحاضرة_4_نظرية_القرار_البايزية.pdf",
+    "focus": "القبلي والإمكان والدليل والبعدي، MAP وML، مقارنة الصور",
+    "questions": [
+      {
+        "type": "mc",
+        "q": "ما الرمز الذي يمثل الاحتمال القبلي للفئة ω؟",
+        "options": [
+          "P(ω)",
+          "P(x|ω)",
+          "P(ω|x)",
+          "P(x)"
+        ],
+        "answer": 0,
+        "explanation": "القبلي يصف احتمال الفئة قبل ملاحظة بيانات العينة الجديدة.",
+        "pages": "8",
+        "topic": "مصطلحات بايز",
+        "id": "L4-01",
+        "number": 1
+      },
+      {
+        "type": "mc",
+        "q": "ماذا تعني P(x|ω)؟",
+        "options": [
+          "احتمال الفئة قبل رؤية البيانات",
+          "احتمال الفئة بعد ملاحظة البيانات",
+          "مجموع نسب الفئات فقط",
+          "احتمال ملاحظة البيانات إذا كانت الفئة ω معلومة"
+        ],
+        "answer": 3,
+        "explanation": "هذا هو الإمكان Likelihood، ويختلف اتجاه الشرط فيه عن الاحتمال البعدي.",
+        "pages": "9",
+        "topic": "مصطلحات بايز",
+        "id": "L4-02",
+        "number": 2
+      },
+      {
+        "type": "mc",
+        "q": "ماذا تمثل P(ω|x)؟",
+        "options": [
+          "الاحتمال البعدي للفئة بعد رؤية البيانات",
+          "عدد عناصر متجه السمات",
+          "الاحتمال القبلي للفئة",
+          "دليل البيانات وحده"
+        ],
+        "answer": 0,
+        "explanation": "البعدي يحدّث احتمال الفئة بعد أخذ بيانات العينة في الحسبان.",
+        "pages": "11",
+        "topic": "مصطلحات بايز",
+        "id": "L4-03",
+        "number": 3
+      },
+      {
+        "type": "mc",
+        "q": "أي صيغة تمثل قانون بايز عند كون الدليل غير صفري؟",
+        "options": [
+          "البعدي = القبلي ÷ الدليل فقط",
+          "البعدي = الإمكان + القبلي",
+          "البعدي = الدليل × القبلي ÷ الإمكان",
+          "البعدي = الإمكان × القبلي ÷ الدليل"
+        ],
+        "answer": 3,
+        "explanation": "نضرب الإمكان في القبلي، ثم نقسم على الدليل لتطبيع النتيجة.",
+        "pages": "8–11",
+        "topic": "القانون",
+        "id": "L4-04",
+        "number": 4
+      },
+      {
+        "type": "mc",
+        "q": "لدينا 700 عينة من أ و300 من ب. ما الاحتمال القبلي للفئة أ؟",
+        "options": [
+          "0.9",
+          "0.5",
+          "0.3",
+          "0.7"
+        ],
+        "answer": 3,
+        "explanation": "قبلي أ =700/1000=0.7.",
+        "pages": "8",
+        "topic": "حسابات",
+        "id": "L4-05",
+        "number": 5
+      },
+      {
+        "type": "mc",
+        "q": "قبلي أ=0.7 وإمكانها=0.8، وقبلي ب=0.3 وإمكانها=0.2. ما الدليل؟",
+        "options": [
+          "0.06",
+          "1.00",
+          "0.62",
+          "0.56"
+        ],
+        "answer": 2,
+        "explanation": "الدليل =0.7×0.8+0.3×0.2=0.56+0.06=0.62.",
+        "pages": "10",
+        "topic": "حسابات",
+        "id": "L4-06",
+        "number": 6
+      },
+      {
+        "type": "mc",
+        "q": "حاصل الإمكان × القبلي لأ يساوي 0.56، والدليل 0.62. ما بعدي أ تقريبًا إلى ثلاث منازل؟",
+        "options": [
+          "0.903",
+          "0.097",
+          "0.620",
+          "0.560"
+        ],
+        "answer": 0,
+        "explanation": "بعدي أ =0.56/0.62≈0.903.",
+        "pages": "11",
+        "topic": "حسابات",
+        "id": "L4-07",
+        "number": 7
+      },
+      {
+        "type": "mc",
+        "q": "قبلي أ=0.6 وإمكانها=0.5، وقبلي ب=0.4 وإمكانها=0.25. ما بعدي أ؟",
+        "options": [
+          "0.25",
+          "0.75",
+          "0.40",
+          "0.30"
+        ],
+        "answer": 1,
+        "explanation": "وزن أ=0.30 ووزن ب=0.10، والدليل=0.40؛ البعدي لأ=0.30/0.40=0.75.",
+        "pages": "8–13؛ تطبيق على القانون",
+        "topic": "حسابات",
+        "id": "L4-08",
+        "number": 8
+      },
+      {
+        "type": "mc",
+        "q": "على أي أساس تختار قاعدة MAP الفئة؟",
+        "options": [
+          "أكبر احتمال بعدي",
+          "أكبر عدد أبعاد",
+          "أصغر دليل مستقل لكل فئة",
+          "أصغر احتمال بعدي"
+        ],
+        "answer": 0,
+        "explanation": "MAP تعني اختيار الفئة ذات الاحتمال البعدي الأكبر.",
+        "pages": "12–13",
+        "topic": "قواعد القرار",
+        "id": "L4-09",
+        "number": 9
+      },
+      {
+        "type": "mc",
+        "q": "متى يتفق ترتيب MAP مع ML وفق المحاضرة؟",
+        "options": [
+          "عند تساوي عدد السمات فقط",
+          "عند تساوي الاحتمالات القبلية للفئات",
+          "عندما يكون الدليل صفرًا",
+          "عندما لا نلاحظ أي بيانات إطلاقًا"
+        ],
+        "answer": 1,
+        "explanation": "عند تساوي القبليات يصبح ترتيب الإمكان × القبلي هو ترتيب الإمكان نفسه.",
+        "pages": "13",
+        "topic": "قواعد القرار",
+        "id": "L4-10",
+        "number": 10
+      },
+      {
+        "type": "mc",
+        "q": "قبلي أ=0.8 وإمكانها=0.3، وقبلي ب=0.2 وإمكانها=0.7. ماذا تختار MAP وML؟",
+        "options": [
+          "كلتاهما تختار ب",
+          "MAP تختار أ، وML تختار ب",
+          "MAP تختار ب، وML تختار أ",
+          "كلتاهما تختار أ"
+        ],
+        "answer": 1,
+        "explanation": "MAP تقارن 0.24 و0.14 فتختار أ؛ ML تقارن الإمكانين 0.3 و0.7 فتختار ب.",
+        "pages": "13؛ تطبيق على القاعدة",
+        "topic": "قواعد القرار",
+        "id": "L4-11",
+        "number": 11
+      },
+      {
+        "type": "mc",
+        "q": "في كود المحاضرة، إذا كانت قيم RGB هي 30 و60 و90، فما gray؟",
+        "options": [
+          "30",
+          "90",
+          "60",
+          "180"
+        ],
+        "answer": 2,
+        "explanation": "الكود يستخدم المتوسط الحسابي: gray=(R+G+B)/3=(30+60+90)/3=60.",
+        "pages": "22",
+        "topic": "كود مقارنة الصور",
+        "id": "L4-12",
+        "number": 12
+      },
+      {
+        "type": "mc",
+        "q": "في مقارنة Histogramين مطبّعين، كانت مسافة L1 تساوي 0.4. ما التشابه S=1−D/2؟",
+        "options": [
+          "0.40",
+          "0.60",
+          "0.80",
+          "0.20"
+        ],
+        "answer": 2,
+        "explanation": "التشابه =1−0.4/2=0.80، أي 80%.",
+        "pages": "24–26",
+        "topic": "كود مقارنة الصور",
+        "id": "L4-13",
+        "number": 13
+      },
+      {
+        "type": "mc",
+        "q": "في مثال الكود: قبلي Same=0.5 وقبلي Different=0.5، والإمكانان 0.85 و0.15. ما بعدي Same؟",
+        "options": [
+          "0.50",
+          "0.85",
+          "0.425",
+          "0.15"
+        ],
+        "answer": 1,
+        "explanation": "الدليل=0.85×0.5+0.15×0.5=0.5؛ بعدي Same=0.425/0.5=0.85.",
+        "pages": "28–32",
+        "topic": "كود مقارنة الصور",
+        "id": "L4-14",
+        "number": 14
+      },
+      {
+        "type": "tf",
+        "q": "مجموع الاحتمالات البعدية لجميع الفئات المتنافية والشاملة يساوي 1.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "يقسم قانون بايز أوزان الفئات على مجموعها، فيكون مجموع النتائج 1 عندما يكون الدليل موجبًا.",
+        "pages": "10–12",
+        "topic": "القانون",
+        "id": "L4-15",
+        "number": 15
+      },
+      {
+        "type": "tf",
+        "q": "الإمكان P(x|ω) والبعدي P(ω|x) هما الكمية نفسها دائمًا.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 1,
+        "explanation": "اتجاه الشرط مختلف: الأول احتمال البيانات داخل فئة، والثاني احتمال الفئة بعد رؤية البيانات.",
+        "pages": "9–11",
+        "topic": "مصطلحات بايز",
+        "id": "L4-16",
+        "number": 16
+      },
+      {
+        "type": "tf",
+        "q": "لحسم مقارنة MAP، يمكن مقارنة الإمكان × القبلي دون قسمة كل فئة على الدليل المشترك الموجب.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "لأن المقام نفسه لجميع الفئات فلا يغيّر ترتيب أوزانها.",
+        "pages": "10–13",
+        "topic": "قواعد القرار",
+        "id": "L4-17",
+        "number": 17
+      },
+      {
+        "type": "tf",
+        "q": "تختار ML الفئة ذات أكبر إمكان Likelihood.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "هذه هي قاعدة Maximum Likelihood؛ وتتفق مع MAP عند تساوي القبليات.",
+        "pages": "13",
+        "topic": "قواعد القرار",
+        "id": "L4-18",
+        "number": 18
+      },
+      {
+        "type": "tf",
+        "q": "إذا اختلفت تكاليف الأخطاء، فإن أكبر احتمال بعدي يضمن دائمًا أقل تكلفة متوقعة.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 1,
+        "explanation": "عند اختلاف التكاليف يجب مراعاة المخاطرة المتوقعة؛ MAP ترتبط بتقليل الخطأ عند تساوي تكلفة الأخطاء.",
+        "pages": "7،14؛ مع المحاضرة 3 ص43",
+        "topic": "قواعد القرار",
+        "id": "L4-19",
+        "number": 19
+      },
+      {
+        "type": "tf",
+        "q": "من مزايا نظرية القرار البايزية التعامل المنظم مع عدم اليقين.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "تستخدم الاحتمالات ويمكن إدخال تكاليف القرارات في إطارها.",
+        "pages": "14",
+        "topic": "المزايا والقيود",
+        "id": "L4-20",
+        "number": 20
+      },
+      {
+        "type": "tf",
+        "q": "لا تتأثر القرارات البايزية بجودة تقدير الاحتمالات.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 1,
+        "explanation": "دقة القرار تتأثر بجودة البيانات وتقديرات التوزيعات والاحتمالات.",
+        "pages": "15",
+        "topic": "المزايا والقيود",
+        "id": "L4-21",
+        "number": 21
+      },
+      {
+        "type": "tf",
+        "q": "تزداد صعوبة تقدير التوزيعات الاحتمالية عادة مع زيادة عدد السمات.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "تذكر المحاضرة زيادة التعقيد مع زيادة السمات وصعوبة تقدير التوزيعات في البيانات عالية الأبعاد.",
+        "pages": "15",
+        "topic": "المزايا والقيود",
+        "id": "L4-22",
+        "number": 22
+      },
+      {
+        "type": "tf",
+        "q": "كود مقارنة الصور في المحاضرة يستخرج Histogram رماديًا ذا 256 عنصرًا.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "المستويات الرمادية من 0 إلى 255؛ ثم تُقسم التكرارات على عدد البكسلات للتطبيع.",
+        "pages": "21–22",
+        "topic": "كود مقارنة الصور",
+        "id": "L4-23",
+        "number": 23
+      },
+      {
+        "type": "tf",
+        "q": "استخدام similarity كإمكان Same و1−similarity كإمكان Different هو الافتراض المستخدم في مثال الكود.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "هذا افتراض المثال التعليمي؛ لا يعني أن كل درجة تشابه تمثل تلقائيًا احتمالًا معايرًا.",
+        "pages": "29",
+        "topic": "كود مقارنة الصور",
+        "id": "L4-24",
+        "number": 24
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "شجرة القرار والتصويت",
+    "file": "المحاضرة 6. شجرة القرار.pdf",
+    "focus": "أجزاء الشجرة، Histogram والتطبيع، L1 والتشابه، تصويت الأشجار",
+    "questions": [
+      {
+        "type": "mc",
+        "q": "أي جزء في شجرة القرار يحتوي على القرار النهائي؟",
+        "options": [
+          "Leaf Node — الورقة",
+          "متجه الإدخال",
+          "Root Node — الجذر دائمًا",
+          "Branch — الفرع وحده"
+        ],
+        "answer": 0,
+        "explanation": "الأوراق تمثل القرارات النهائية، بينما العقد الداخلية تحتوي اختبارات.",
+        "pages": "8–9",
+        "topic": "بنية الشجرة",
+        "id": "L6-01",
+        "number": 1
+      },
+      {
+        "type": "mc",
+        "q": "ما الذي تمثله الفروع Branches في شجرة القرار؟",
+        "options": [
+          "المسارات الناتجة عن نتائج الاختبارات",
+          "الفئات النهائية فقط في جميع الحالات",
+          "مجموع التكرارات الرمادية",
+          "عدد سمات الصورة بالضرورة"
+        ],
+        "answer": 0,
+        "explanation": "نتيجة اختبار العقدة تحدد الفرع الذي نتبعه إلى العقدة التالية.",
+        "pages": "8–9",
+        "topic": "بنية الشجرة",
+        "id": "L6-02",
+        "number": 2
+      },
+      {
+        "type": "mc",
+        "q": "ما نقطة بدء المرور في شجرة القرار؟",
+        "options": [
+          "العقدة الجذرية Root Node",
+          "آخر فرع في الشجرة",
+          "نسبة التصويت النهائية",
+          "ورقة مختارة عشوائيًا"
+        ],
+        "answer": 0,
+        "explanation": "نبدأ من الجذر ونتبع نتائج الاختبارات حتى الوصول إلى ورقة.",
+        "pages": "9",
+        "topic": "بنية الشجرة",
+        "id": "L6-03",
+        "number": 3
+      },
+      {
+        "type": "mc",
+        "q": "ما الذي يحصيه Histogram الرمادي؟",
+        "options": [
+          "ترتيب إحداثيات جميع البكسلات",
+          "اسم كل كائن في الصورة",
+          "تكرار كل درجة رمادية في الصورة",
+          "عدد الأشجار التي صوّتت"
+        ],
+        "answer": 2,
+        "explanation": "Histogram يصف توزيع القيم الرمادية بتكراراتها، ولا يحتفظ وحده بترتيب البكسلات المكاني.",
+        "pages": "16–18",
+        "topic": "Histogram",
+        "id": "L6-04",
+        "number": 4
+      },
+      {
+        "type": "mc",
+        "q": "ما عدد المستويات الممكنة للصورة الرمادية ذات القيم من 0 إلى 255؟",
+        "options": [
+          "254",
+          "256",
+          "255",
+          "2"
+        ],
+        "answer": 1,
+        "explanation": "يشمل المدى كلا الطرفين: 255−0+1=256 مستوى.",
+        "pages": "14،16",
+        "topic": "Histogram",
+        "id": "L6-05",
+        "number": 5
+      },
+      {
+        "type": "mc",
+        "q": "إذا كان H=[2,6] وعدد البكسلات N=8، فما Histogram المطبّع؟",
+        "options": [
+          "[0.5,1.5]",
+          "[4,12]",
+          "[0.25,0.75]",
+          "[2,6]"
+        ],
+        "answer": 2,
+        "explanation": "نقسم كل تكرار على 8، فيكون المجموع بعد التطبيع 1.",
+        "pages": "20–22؛ تطبيق على القانون",
+        "topic": "التطبيع",
+        "id": "L6-06",
+        "number": 6
+      },
+      {
+        "type": "mc",
+        "q": "لماذا نطبّع Histogram عند مقارنة صور بأحجام مختلفة؟",
+        "options": [
+          "لضمان تطابق محتوى الصور",
+          "لتحويل التصنيف إلى تجميع",
+          "لتقليل أثر عدد البكسلات عند مقارنة التوزيع",
+          "لحذف جميع المستويات الرمادية"
+        ],
+        "answer": 2,
+        "explanation": "التكرارات الخام قد تختلف بسبب حجم الصورة؛ النسب المطبّعة تصف توزيعها النسبي.",
+        "pages": "19–20",
+        "topic": "التطبيع",
+        "id": "L6-07",
+        "number": 7
+      },
+      {
+        "type": "mc",
+        "q": "ما صيغة مسافة L1 بين متجهين؟",
+        "options": [
+          "مجموع القيم المطلقة لفروق العناصر المناظرة",
+          "الجذر التربيعي لمجموع مربعات الفروق",
+          "مجموع فروق العناصر دون قيمة مطلقة",
+          "متوسط عناصر المتجه الأول فقط"
+        ],
+        "answer": 0,
+        "explanation": "L1 تجمع |h1(i)−h2(i)| حتى لا تلغي الفروق الموجبة والسالبة بعضها.",
+        "pages": "23–24",
+        "topic": "المسافة والتشابه",
+        "id": "L6-08",
+        "number": 8
+      },
+      {
+        "type": "mc",
+        "q": "للمتجهين h1=[0.25,0.75] وh2=[0.50,0.50]، ما مسافة L1؟",
+        "options": [
+          "0.00",
+          "0.25",
+          "0.50",
+          "1.00"
+        ],
+        "answer": 2,
+        "explanation": "المسافة=|0.25−0.50|+|0.75−0.50|=0.25+0.25=0.50.",
+        "pages": "23–24؛ تطبيق على القانون",
+        "topic": "المسافة والتشابه",
+        "id": "L6-09",
+        "number": 9
+      },
+      {
+        "type": "mc",
+        "q": "ما مجال مسافة L1 بين Histogramين غير سالبين ومطبّعين بحيث مجموع كل منهما 1؟",
+        "options": [
+          "من −1 إلى 1",
+          "من 1 إلى 256",
+          "من 0 إلى 1 فقط",
+          "من 0 إلى 2"
+        ],
+        "answer": 3,
+        "explanation": "المسافة لا تقل عن صفر، ولا تزيد عن مجموع كتلتي التوزيعين وهو 2.",
+        "pages": "24",
+        "topic": "المسافة والتشابه",
+        "id": "L6-10",
+        "number": 10
+      },
+      {
+        "type": "mc",
+        "q": "إذا كانت D=0.5، فما التشابه وفق S=1−D/2؟",
+        "options": [
+          "25%",
+          "50%",
+          "70%",
+          "75%"
+        ],
+        "answer": 3,
+        "explanation": "S=1−0.5/2=0.75، أي 75%.",
+        "pages": "25",
+        "topic": "المسافة والتشابه",
+        "id": "L6-11",
+        "number": 11
+      },
+      {
+        "type": "mc",
+        "q": "التشابه يساوي 0.75 وعتبة شجرة تساوي 0.75. ما صوتها إذا كانت القاعدة S≥Threshold؟",
+        "options": [
+          "1: متشابه",
+          "0.75: لا يوجد صوت ثنائي",
+          "0: مختلف",
+          "لا يُتخذ قرار عند التساوي"
+        ],
+        "answer": 0,
+        "explanation": "المقارنة تشمل المساواة، لذلك 0.75≥0.75 صحيح ويكون الصوت 1.",
+        "pages": "28–30",
+        "topic": "التصويت",
+        "id": "L6-12",
+        "number": 12
+      },
+      {
+        "type": "mc",
+        "q": "في المثال، أصوات الأشجار [1,1,1,1,1,1,1,0,0,0]. ما نسبة التصويت للتشابه؟",
+        "options": [
+          "100%",
+          "70%",
+          "75%",
+          "30%"
+        ],
+        "answer": 1,
+        "explanation": "عدد الأصوات الموافقة 7 من 10، والنسبة 7/10=0.70.",
+        "pages": "30–32",
+        "topic": "التصويت",
+        "id": "L6-13",
+        "number": 13
+      },
+      {
+        "type": "mc",
+        "q": "نسبة التصويت 0.50 والعتبة النهائية 0.50، والقاعدة هي النسبة ≥ العتبة. ما القرار؟",
+        "options": [
+          "يتوقف القرار على مسافة L2 فقط",
+          "يجب إسقاط جميع الأصوات",
+          "مختلف",
+          "متشابه"
+        ],
+        "answer": 3,
+        "explanation": "المساواة تحقق شرط ≥؛ وهذا تطبيق مباشر لقاعدة القرار المعلنة.",
+        "pages": "33؛ تطبيق على القاعدة",
+        "topic": "التصويت",
+        "id": "L6-14",
+        "number": 14
+      },
+      {
+        "type": "tf",
+        "q": "عقد القرار الداخلية تحتوي اختبارات أو شروطًا على الخصائص.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "تمثل كل عقدة قرار اختبارًا، ثم يتحدد الفرع تبعًا لنتيجته.",
+        "pages": "8",
+        "topic": "بنية الشجرة",
+        "id": "L6-15",
+        "number": 15
+      },
+      {
+        "type": "tf",
+        "q": "في مثال المحاضرة تُقارن الصور بكسلًا ببكسل في المواقع المتناظرة مباشرة.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 1,
+        "explanation": "المثال يستخرج Histogram مطبّعًا لكل صورة، ثم يحسب المسافة والتشابه بين المتجهين.",
+        "pages": "13،18",
+        "topic": "Histogram",
+        "id": "L6-16",
+        "number": 16
+      },
+      {
+        "type": "tf",
+        "q": "مجموع Histogram المطبّع يساوي عدد البكسلات الأصلي N.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 1,
+        "explanation": "مجموع التكرارات الخام يساوي N؛ بعد القسمة على N يصبح مجموع القيم المطبّعة 1.",
+        "pages": "20–22",
+        "topic": "التطبيع",
+        "id": "L6-17",
+        "number": 17
+      },
+      {
+        "type": "tf",
+        "q": "زيادة مسافة L1 تعني زيادة التشابه في الصيغة S=1−D/2.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 1,
+        "explanation": "العلاقة عكسية: بزيادة المسافة يقل التشابه.",
+        "pages": "24–25",
+        "topic": "المسافة والتشابه",
+        "id": "L6-18",
+        "number": 18
+      },
+      {
+        "type": "tf",
+        "q": "إذا كانت مسافة L1 صفرًا، فإن Histogramين متطابقان.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "جميع فروق العناصر المناظرة تساوي صفرًا؛ هذا لا يكفي وحده لضمان تطابق ترتيب بكسلات الصورتين.",
+        "pages": "24",
+        "topic": "المسافة والتشابه",
+        "id": "L6-19",
+        "number": 19
+      },
+      {
+        "type": "tf",
+        "q": "عندما تكون D=2، يصبح التشابه S=1−D/2 مساويًا للصفر.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "بالتعويض S=1−2/2=0، للمتجهات المطبّعة المستخدمة في المثال.",
+        "pages": "24–25",
+        "topic": "المسافة والتشابه",
+        "id": "L6-20",
+        "number": 20
+      },
+      {
+        "type": "tf",
+        "q": "تستخدم الغابة عدة أشجار وتجمع قراراتها بالتصويت في المثال.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "المثال يجمع أصوات عدة أشجار بدل الاعتماد على قرار واحد.",
+        "pages": "26–27",
+        "topic": "التصويت",
+        "id": "L6-21",
+        "number": 21
+      },
+      {
+        "type": "tf",
+        "q": "في مثال المحاضرة، درجة التشابه 75% ونسبة تصويت الأشجار 70% هما مقدار واحد يجب أن يتساوى.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 1,
+        "explanation": "75% ناتجة عن مقارنة Histogramين، و70% ناتجة عن 7 أصوات موافقة من 10 أشجار.",
+        "pages": "25،32",
+        "topic": "التصويت",
+        "id": "L6-22",
+        "number": 22
+      },
+      {
+        "type": "tf",
+        "q": "يمكن أن تختلف عتبة القرار بين الأشجار في المثال.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "تستخدم المحاضرة عشر عتبات مختلفة، من 0.50 إلى 0.82.",
+        "pages": "28",
+        "topic": "التصويت",
+        "id": "L6-23",
+        "number": 23
+      },
+      {
+        "type": "tf",
+        "q": "مثال العتبات والتصويت في المحاضرة يشرح جميع تفاصيل تدريب الغابة العشوائية المعتادة.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 1,
+        "explanation": "هو مثال مبسط موسوم Similarity-Based Random Forest Voting؛ لا يقدم تدريب الغابة العشوائية الكامل.",
+        "pages": "10،26–33",
+        "topic": "حدود المثال",
+        "id": "L6-24",
+        "number": 24
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "أقرب الجيران KNN",
+    "file": "المحاضرة_7_خوارزمية_اقرب_الجيران.pdf",
+    "focus": "المسافة والترتيب، اختيار K، الأغلبية، نسبة التصويت وتشابه الأقرب",
+    "questions": [
+      {
+        "type": "mc",
+        "q": "ما نوع التعلم الذي تنتمي إليه KNN في التصنيف بالمحاضرة؟",
+        "options": [
+          "تعلم خاضع للإشراف",
+          "تعلم غير خاضع للإشراف",
+          "تجميع بلا تسميات",
+          "تعلم يعتمد فقط على مراكز غير مسماة"
+        ],
+        "answer": 0,
+        "explanation": "تعتمد KNN على فئات معلومة لعينات التدريب كي تصنف العينة الجديدة.",
+        "pages": "7",
+        "topic": "الفكرة",
+        "id": "L7-01",
+        "number": 1
+      },
+      {
+        "type": "mc",
+        "q": "ماذا تمثل K في KNN؟",
+        "options": [
+          "عدد المجموعات المكتشفة",
+          "عدد سمات الصورة دائمًا",
+          "عدد مستويات الرمادي دائمًا",
+          "عدد أقرب الجيران المستخدمين في القرار"
+        ],
+        "answer": 3,
+        "explanation": "نختار أقرب K عينات تدريب ثم نستخدم فئاتها للتصويت.",
+        "pages": "7،21",
+        "topic": "الفكرة",
+        "id": "L7-02",
+        "number": 2
+      },
+      {
+        "type": "mc",
+        "q": "ما الترتيب الصحيح بعد الحصول على متجه سمات العينة الجديدة؟",
+        "options": [
+          "اختيار الفئة أولًا، ثم حساب المسافات، ثم حذف الجيران",
+          "حساب مراكز بلا تسميات، ثم تحديثها فقط",
+          "ترتيب تنازلي، اختيار الأبعد، ثم حساب المراكز",
+          "حساب المسافات، ترتيب تصاعدي، اختيار K، التصويت"
+        ],
+        "answer": 3,
+        "explanation": "KNN ترتب الجيران من الأقل مسافة إلى الأكبر قبل اختيار K والتصويت.",
+        "pages": "7،9",
+        "topic": "الخطوات",
+        "id": "L7-03",
+        "number": 3
+      },
+      {
+        "type": "mc",
+        "q": "ما المسافة الإقليدية بين النقطتين (2,3) و(5,7)؟",
+        "options": [
+          "√7",
+          "5",
+          "7",
+          "25"
+        ],
+        "answer": 1,
+        "explanation": "الفروق 3 و4؛ المسافة=√(3²+4²)=√25=5.",
+        "pages": "17–18؛ تطبيق على القانون",
+        "topic": "المسافة",
+        "id": "L7-04",
+        "number": 4
+      },
+      {
+        "type": "mc",
+        "q": "إذا تطابق متجها T وA1، فما المسافة الإقليدية بينهما؟",
+        "options": [
+          "1",
+          "0",
+          "2",
+          "تعتمد على اسم الفئة وحده"
+        ],
+        "answer": 1,
+        "explanation": "كل فرق مناظر يساوي صفرًا، فتكون المسافة √0=0.",
+        "pages": "18",
+        "topic": "المسافة",
+        "id": "L7-05",
+        "number": 5
+      },
+      {
+        "type": "mc",
+        "q": "المسافات هي A1:0، A2:0.08839، B1:0.57960، B2:0.44194. ما أقرب ثلاثة؟",
+        "options": [
+          "A1 ثم A2 ثم B2",
+          "B2 ثم A1 ثم B1",
+          "B1 ثم B2 ثم A2",
+          "A1 ثم A2 ثم B1"
+        ],
+        "answer": 0,
+        "explanation": "نرتب تصاعديًا: 0 ثم 0.08839 ثم 0.44194 ثم 0.57960.",
+        "pages": "19–21",
+        "topic": "الترتيب",
+        "id": "L7-06",
+        "number": 6
+      },
+      {
+        "type": "mc",
+        "q": "أقرب ثلاثة جيران فئاتهم أحمد، أحمد، علي. ما القرار بالأغلبية؟",
+        "options": [
+          "المجموعة الثالثة",
+          "تعادل",
+          "أحمد",
+          "علي"
+        ],
+        "answer": 2,
+        "explanation": "أحمد يحصل على صوتين مقابل صوت واحد لعلي.",
+        "pages": "21–22",
+        "topic": "التصويت",
+        "id": "L7-07",
+        "number": 7
+      },
+      {
+        "type": "mc",
+        "q": "إذا صوّت اثنان من أقرب ثلاثة جيران للفئة الفائزة، فما نسبة التصويت تقريبًا؟",
+        "options": [
+          "100%",
+          "66.67%",
+          "33.33%",
+          "50%"
+        ],
+        "answer": 1,
+        "explanation": "نسبة التصويت=2/3≈0.6667، أي 66.67%.",
+        "pages": "23",
+        "topic": "التصويت",
+        "id": "L7-08",
+        "number": 8
+      },
+      {
+        "type": "mc",
+        "q": "في تحويل التشابه الخاص بمثال KNN، إذا كانت مسافة أقرب جار 0.25، فما S=1/(1+d)؟",
+        "options": [
+          "1.25",
+          "0.75",
+          "0.25",
+          "0.80"
+        ],
+        "answer": 3,
+        "explanation": "S=1/(1+0.25)=1/1.25=0.80.",
+        "pages": "24؛ تطبيق على القانون",
+        "topic": "تشابه أقرب جار",
+        "id": "L7-09",
+        "number": 9
+      },
+      {
+        "type": "mc",
+        "q": "في المثال، أقرب مسافة تساوي صفرًا بينما الأغلبية 2 من 3. ما التشابه ونسبة التصويت على الترتيب؟",
+        "options": [
+          "100% ثم 66.67%",
+          "66.67% ثم 66.67%",
+          "100% ثم 100%",
+          "66.67% ثم 100%"
+        ],
+        "answer": 0,
+        "explanation": "تشابه الأقرب=1/(1+0)=100%، ونسبة التصويت=2/3≈66.67%.",
+        "pages": "23–24",
+        "topic": "التمييز بين المقاييس",
+        "id": "L7-10",
+        "number": 10
+      },
+      {
+        "type": "mc",
+        "q": "في مثال A1، Histogram=[1,5,7,3] وعدد البكسلات 16. ما القيمة المطبّعة للتكرار 7؟",
+        "options": [
+          "0.3125",
+          "0.1875",
+          "0.0625",
+          "0.4375"
+        ],
+        "answer": 3,
+        "explanation": "7/16=0.4375. لاحظ أن تكرار الدرجة 3 الصحيح في المصفوفة هو 3؛ يوجد سطر مطبعي يذكر 4 في ص13.",
+        "pages": "13–14",
+        "topic": "استخراج السمات",
+        "id": "L7-11",
+        "number": 11
+      },
+      {
+        "type": "mc",
+        "q": "إذا كان K=4 وصوّت جاران لأحمد وجاران لعلي، فما وضع التصويت؟",
+        "options": [
+          "أحمد يفوز بالأغلبية تلقائيًا",
+          "تعادل يحتاج قاعدة حسم",
+          "التصويت يصبح 100% للفئتين",
+          "علي يفوز بالأغلبية تلقائيًا"
+        ],
+        "answer": 1,
+        "explanation": "لكل فئة صوتان من أربعة؛ لا توجد أغلبية فائزة دون قاعدة حسم إضافية.",
+        "pages": "21–23؛ امتداد تعليمي",
+        "topic": "التصويت",
+        "id": "L7-12",
+        "number": 12
+      },
+      {
+        "type": "tf",
+        "q": "المسافة الأصغر تعني قربًا أكبر وفق التمثيل المستخدم.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "KNN تختار أقل المسافات بين متجه العينة الجديدة ومتجهات التدريب.",
+        "pages": "17",
+        "topic": "المسافة",
+        "id": "L7-13",
+        "number": 13
+      },
+      {
+        "type": "tf",
+        "q": "تُرتب KNN المسافات تنازليًا لاختيار أبعد K جيران في المثال.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 1,
+        "explanation": "الترتيب تصاعدي، وتُختار أقرب K عينات.",
+        "pages": "20–21",
+        "topic": "الترتيب",
+        "id": "L7-14",
+        "number": 14
+      },
+      {
+        "type": "tf",
+        "q": "نسبة التصويت في KNN تضمن دائمًا احتمالًا حقيقيًا معايرًا لانتماء العينة.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 1,
+        "explanation": "المحاضرة تنص على أنها نسبة تصويت وليست احتمالًا حقيقيًا مضمونًا.",
+        "pages": "23",
+        "topic": "التصويت",
+        "id": "L7-15",
+        "number": 15
+      },
+      {
+        "type": "tf",
+        "q": "التشابه في مثال KNN يُحسب من أقرب جار فقط بصيغة 1/(1+d).",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "هذه هي صيغة العرض الإضافية المستخدمة في المثال، وليست متوسط تشابه جميع الجيران.",
+        "pages": "24",
+        "topic": "تشابه أقرب جار",
+        "id": "L7-16",
+        "number": 16
+      },
+      {
+        "type": "tf",
+        "q": "عدد عناصر Histogram يساوي دائمًا عدد بكسلات الصورة.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 1,
+        "explanation": "عدد عناصره يساوي عدد المستويات أو الفئات المستخدمة؛ المثال يبسطها إلى أربع درجات رمادية.",
+        "pages": "11–12",
+        "topic": "استخراج السمات",
+        "id": "L7-17",
+        "number": 17
+      },
+      {
+        "type": "tf",
+        "q": "متجه Histogram المطبّع يمثل الصورة بوصفه متجه سمات في مثال المحاضرة.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "تُستخدم نسب تكرارات الدرجات الرمادية كسمات لحساب المسافات.",
+        "pages": "14–16",
+        "topic": "استخراج السمات",
+        "id": "L7-18",
+        "number": 18
+      },
+      {
+        "type": "tf",
+        "q": "في مثال K=3 نأخذ A1 وA2 وB1 لأن B1 مكتوبة قبل B2 في البيانات.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 1,
+        "explanation": "الاختيار يعتمد على المسافة، لذلك B2 تسبق B1 ويكون أقرب ثلاثة A1 وA2 وB2.",
+        "pages": "19–21",
+        "topic": "الترتيب",
+        "id": "L7-19",
+        "number": 19
+      },
+      {
+        "type": "tf",
+        "q": "KNN وK-Means تستخدمان K بالمعنى نفسه.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 1,
+        "explanation": "K في KNN عدد الجيران؛ وفي K-Means عدد المجموعات.",
+        "pages": "21؛ مع المحاضرة 8 ص17",
+        "topic": "المقارنة",
+        "id": "L7-20",
+        "number": 20
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "التجميع وK-Means",
+    "file": "المحاضرة_8_التجميع_في_تمييز_الانماط.pdf",
+    "focus": "التجميع دون تسميات، المسافات، المراكز، الإسناد والتقارب",
+    "questions": [
+      {
+        "type": "mc",
+        "q": "ما الهدف الأساسي من Clustering؟",
+        "options": [
+          "تشابه منخفض داخل المجموعة ومرتفع بين المجموعات",
+          "إعطاء كل نقطة اسم شخص معروف مسبقًا",
+          "تشابه مرتفع داخل المجموعة وانخفاضه بين المجموعات",
+          "زيادة عدد الفئات إلى عدد البكسلات دائمًا"
+        ],
+        "answer": 2,
+        "explanation": "التجميع يضم النقاط المتشابهة ويفصل المجموعات المختلفة نسبيًا.",
+        "pages": "7",
+        "topic": "الفكرة",
+        "id": "L8-01",
+        "number": 1
+      },
+      {
+        "type": "mc",
+        "q": "ما البيانات التي نحتاجها عادة للتجميع دون إشراف؟",
+        "options": [
+          "السمات دون اشتراط تسميات الفئات",
+          "تسمية صحيحة لكل عينة كشرط أساسي",
+          "عدد أوراق شجرة القرار فقط",
+          "نسبة التصويت النهائية فقط"
+        ],
+        "answer": 0,
+        "explanation": "التجميع يستكشف البنية اعتمادًا على السمات والتشابه دون تسميات مسبقة.",
+        "pages": "8–11",
+        "topic": "الفكرة",
+        "id": "L8-02",
+        "number": 2
+      },
+      {
+        "type": "mc",
+        "q": "ماذا تعني K=3 في K-Means؟",
+        "options": [
+          "نختار ثلاثة جيران للتصويت",
+          "نريد تكوين ثلاث مجموعات",
+          "كل عينة يجب أن تملك ثلاث سمات",
+          "نتوقف بالضرورة بعد ثلاث دورات"
+        ],
+        "answer": 1,
+        "explanation": "K تحدد عدد المجموعات المطلوب تكوينها.",
+        "pages": "17",
+        "topic": "K-Means",
+        "id": "L8-03",
+        "number": 3
+      },
+      {
+        "type": "mc",
+        "q": "ما Centroid في K-Means؟",
+        "options": [
+          "اسم الفئة الحقيقي",
+          "أول نقطة في الملف دائمًا",
+          "أبعد نقطة عن بقية النقاط دائمًا",
+          "المتوسط الحسابي لنقاط المجموعة"
+        ],
+        "answer": 3,
+        "explanation": "يُحسب المركز بتوسيط إحداثيات النقاط في كل بُعد.",
+        "pages": "19،31–32",
+        "topic": "المركز",
+        "id": "L8-04",
+        "number": 4
+      },
+      {
+        "type": "mc",
+        "q": "ما مركز النقاط (2,2)، (4,4)، (6,6)؟",
+        "options": [
+          "(6,6)",
+          "(12,12)",
+          "(4,4)",
+          "(2,2)"
+        ],
+        "answer": 2,
+        "explanation": "متوسط كل إحداثي=(2+4+6)/3=4.",
+        "pages": "19",
+        "topic": "حساب المراكز",
+        "id": "L8-05",
+        "number": 5
+      },
+      {
+        "type": "mc",
+        "q": "بعد اختيار المراكز الأولية، كيف تُسند نقطة إلى مجموعة؟",
+        "options": [
+          "إلى أبعد مركز",
+          "حسب تسميتها الحقيقية غير المعطاة",
+          "حسب ترتيب اسمها الأبجدي فقط",
+          "إلى أقرب مركز وفق مقياس المسافة"
+        ],
+        "answer": 3,
+        "explanation": "تحسب المسافة من النقطة إلى المراكز ثم تُسند إلى الأقرب.",
+        "pages": "21",
+        "topic": "خطوات الخوارزمية",
+        "id": "L8-06",
+        "number": 6
+      },
+      {
+        "type": "mc",
+        "q": "بعد إسناد جميع النقاط، ما الخطوة التالية في K-Means؟",
+        "options": [
+          "حذف المراكز نهائيًا",
+          "تحويل K إلى عدد السمات",
+          "إعادة حساب متوسط كل مجموعة كمركز جديد",
+          "التصويت بأسماء عينات التدريب"
+        ],
+        "answer": 2,
+        "explanation": "تتناوب K-Means بين الإسناد إلى الأقرب وتحديث المراكز بالمتوسط.",
+        "pages": "21،31–32",
+        "topic": "خطوات الخوارزمية",
+        "id": "L8-07",
+        "number": 7
+      },
+      {
+        "type": "mc",
+        "q": "النقطة B=(2,2) والمركز C1=(1,1). ما المسافة الإقليدية بينهما؟",
+        "options": [
+          "√2",
+          "0",
+          "2",
+          "√8"
+        ],
+        "answer": 0,
+        "explanation": "المسافة=√[(2−1)²+(2−1)²]=√2.",
+        "pages": "26",
+        "topic": "مثال المحاضرة",
+        "id": "L8-08",
+        "number": 8
+      },
+      {
+        "type": "mc",
+        "q": "المسافتان من B إلى المركزين هما تقريبًا 1.414 و8.485. لأي مجموعة تُسند؟",
+        "options": [
+          "مجموعة المركز الأول",
+          "المجموعتان بالتساوي في K-Means العادية",
+          "لا تُسند لأي مجموعة",
+          "مجموعة المركز الثاني"
+        ],
+        "answer": 0,
+        "explanation": "نختار أصغر مسافة وهي 1.414، فتُسند B إلى المجموعة الأولى.",
+        "pages": "26–27",
+        "topic": "مثال المحاضرة",
+        "id": "L8-09",
+        "number": 9
+      },
+      {
+        "type": "mc",
+        "q": "ما مركز النقاط A=(1,1)، B=(2,2)، C=(3,1)؟",
+        "options": [
+          "(6,4)",
+          "(2,2)",
+          "(2,4/3)",
+          "(1,1)"
+        ],
+        "answer": 2,
+        "explanation": "متوسط x=6/3=2، ومتوسط y=4/3.",
+        "pages": "31",
+        "topic": "مثال المحاضرة",
+        "id": "L8-10",
+        "number": 10
+      },
+      {
+        "type": "mc",
+        "q": "ما مركز النقاط D=(8,8)، E=(9,9)، F=(8,9)؟",
+        "options": [
+          "(8,8)",
+          "(25,26)",
+          "(26/3,25/3)",
+          "(25/3,26/3)"
+        ],
+        "answer": 3,
+        "explanation": "متوسط x=(8+9+8)/3=25/3، ومتوسط y=(8+9+9)/3=26/3.",
+        "pages": "32",
+        "topic": "مثال المحاضرة",
+        "id": "L8-11",
+        "number": 11
+      },
+      {
+        "type": "mc",
+        "q": "في مثال المحاضرة، ما مجموعتا النقاط بعد الإسناد؟",
+        "options": [
+          "{A,D,E} و{B,C,F}",
+          "{A,C,F} و{B,D,E}",
+          "{A,B,C} و{D,E,F}",
+          "{A,B,D} و{C,E,F}"
+        ],
+        "answer": 2,
+        "explanation": "المراكز الأولية عند (1,1) و(8,8) تجعل A وB وC أقرب للأول، وD وE وF أقرب للثاني.",
+        "pages": "23–30",
+        "topic": "مثال المحاضرة",
+        "id": "L8-12",
+        "number": 12
+      },
+      {
+        "type": "mc",
+        "q": "ماذا تسمّي المحاضرة استقرار المجموعات بعد تكرار الإسناد والتحديث؟",
+        "options": [
+          "التصويت Majority Voting",
+          "التجزئة Segmentation",
+          "التقارب Convergence",
+          "الاحتمال القبلي Prior"
+        ],
+        "answer": 2,
+        "explanation": "في المثال لم تتغير المجموعات في التكرار التالي، فيتحقق الاستقرار وتتوقف الخوارزمية.",
+        "pages": "33–34",
+        "topic": "التقارب",
+        "id": "L8-13",
+        "number": 13
+      },
+      {
+        "type": "mc",
+        "q": "أي خوارزمية وردت ضمن قائمة خوارزميات التجميع في المحاضرة؟",
+        "options": [
+          "OCR لقراءة الحروف",
+          "KNN للتصنيف",
+          "DBSCAN",
+          "MAP لاتخاذ القرار"
+        ],
+        "answer": 2,
+        "explanation": "تذكر المحاضرة K-Means وHierarchical Clustering وDBSCAN وGMM وFuzzy C-Means.",
+        "pages": "16",
+        "topic": "خوارزميات التجميع",
+        "id": "L8-14",
+        "number": 14
+      },
+      {
+        "type": "tf",
+        "q": "K-Means خوارزمية تعلم غير خاضعة للإشراف.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "تكتشف مجموعات اعتمادًا على السمات دون طلب تسميات صحيحة لكل عينة.",
+        "pages": "17",
+        "topic": "الفكرة",
+        "id": "L8-15",
+        "number": 15
+      },
+      {
+        "type": "tf",
+        "q": "يمكن أن نستخدم استخراج السمات قبل التجميع كما نستخدمه قبل التصنيف.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "تسلسل المحاضرة يشمل المعالجة واستخراج السمات ثم المسافة وخوارزمية التجميع.",
+        "pages": "12–13",
+        "topic": "تمثيل البيانات",
+        "id": "L8-16",
+        "number": 16
+      },
+      {
+        "type": "tf",
+        "q": "تختار K-Means عدد المجموعات تلقائيًا دائمًا دون تحديد K.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 1,
+        "explanation": "خطوة أساسية في الخوارزمية المعروضة هي اختيار عدد المجموعات K.",
+        "pages": "17،21",
+        "topic": "K-Means",
+        "id": "L8-17",
+        "number": 17
+      },
+      {
+        "type": "tf",
+        "q": "يجب أن يكون مركز المجموعة دائمًا إحدى نقاط البيانات الأصلية.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 1,
+        "explanation": "المركز متوسط حسابي وقد يقع في موضع لا يمثل أي نقطة أصلية، مثل (2,4/3) في المثال.",
+        "pages": "19،31",
+        "topic": "المركز",
+        "id": "L8-18",
+        "number": 18
+      },
+      {
+        "type": "tf",
+        "q": "بعد تحديث المراكز نعيد حساب إسناد النقاط إلى أقرب مركز.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "يتكرر الإسناد والتحديث حتى يتحقق معيار الاستقرار.",
+        "pages": "21،33",
+        "topic": "خطوات الخوارزمية",
+        "id": "L8-19",
+        "number": 19
+      },
+      {
+        "type": "tf",
+        "q": "إذا كان بُعد نقطة عن مركزين 2 و8.602، تُسند إلى المركز ذي البعد 8.602.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 1,
+        "explanation": "الأقرب هو صاحب المسافة 2، لذلك تُسند النقطة إليه.",
+        "pages": "28–29",
+        "topic": "المسافة",
+        "id": "L8-20",
+        "number": 20
+      },
+      {
+        "type": "tf",
+        "q": "في مثال المحاضرة، لم تتغير عضوية المجموعتين في التكرار الثاني.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "بقيت A وB وC في المجموعة الأولى، وD وE وF في الثانية.",
+        "pages": "33–34",
+        "topic": "التقارب",
+        "id": "L8-21",
+        "number": 21
+      },
+      {
+        "type": "tf",
+        "q": "التجميع يكتشف اسم الشخص الحقيقي لكل مجموعة تلقائيًا بمجرد حساب المراكز.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 1,
+        "explanation": "التجميع يكتشف المجموعات؛ الأسماء أو التفسيرات الدلالية تحتاج معلومات إضافية.",
+        "pages": "10،35",
+        "topic": "الفكرة",
+        "id": "L8-22",
+        "number": 22
+      },
+      {
+        "type": "tf",
+        "q": "مركز المجموعة الأولى في المثال يساوي تقريبًا (2,1.333).",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "المركز الدقيق هو (2,4/3)، وتقريب 4/3 إلى ثلاث منازل يساوي 1.333.",
+        "pages": "31",
+        "topic": "مثال المحاضرة",
+        "id": "L8-23",
+        "number": 23
+      },
+      {
+        "type": "tf",
+        "q": "كلما صغرت المسافة الإقليدية بين نقطتين زاد قربهما وفق السمات المستخدمة.",
+        "options": [
+          "صح",
+          "خطأ"
+        ],
+        "answer": 0,
+        "explanation": "تعتمد أمثلة المحاضرة على المسافة لقياس القرب في فضاء السمات.",
+        "pages": "14–15",
+        "topic": "المسافة",
+        "id": "L8-24",
+        "number": 24
+      }
+    ]
+  }
+];
+const KEY='pattern-recognition-exam-144-v1';
+const ALL=BANK.flatMap(c=>c.questions);
+const BY_ID=new Map(ALL.map(q=>[q.id,q]));
+function cleanAnswers(raw){const result={};if(!raw||typeof raw!=='object')return result;for(const [id,a] of Object.entries(raw)){const q=BY_ID.get(id);if(q&&a&&Number.isInteger(a.choice)&&a.choice>=0&&a.choice<q.options.length)result[id]={choice:a.choice,graded:a.graded===true};}return result;}
+function statistics(questions,answers){const s={total:questions.length,answered:0,correct:0,wrong:0,pending:0,unanswered:0};questions.forEach(q=>{const a=answers[q.id];if(!a){s.unanswered++;return;}s.answered++;if(!a.graded){s.pending++;return;}if(a.choice===q.answer)s.correct++;else s.wrong++;});s.graded=s.correct+s.wrong;s.percent=s.total?Math.round(100*s.correct/s.total):0;s.accuracy=s.graded?Math.round(100*s.correct/s.graded):null;return s;}
+function grade(questions,answers){for(const q of questions){if(answers[q.id])answers[q.id].graded=true;}}
+function visibleQuestions(c,answers,type,wrongOnly){return c.questions.filter(q=>(type==='all'||q.type===type)&&(!wrongOnly||(answers[q.id]?.graded&&answers[q.id].choice!==q.answer)));}
+function setAnswer(answers,id,choice){const q=BY_ID.get(id);if(!q||!Number.isInteger(choice)||choice<0||choice>=q.options.length||answers[id]?.graded)return false;answers[id]={choice,graded:false};return true;}
+function resetChapter(c,answers){c.questions.forEach(q=>delete answers[q.id]);}
+if(typeof document==='undefined'){
+  if(typeof module!=='undefined')module.exports={BANK,ALL,BY_ID,cleanAnswers,statistics,grade,visibleQuestions,setAnswer,resetChapter};
+}else{
+(()=>{
+const $=id=>document.getElementById(id);
+const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const letters=['أ','ب','ج','د'];
+let answers={},chapterNumber=1,currentId='L1-01',mode='practice',type='all',wrongOnly=false,storageOK=true;
+try{const saved=JSON.parse(localStorage.getItem(KEY)||'null');if(saved&&saved.version===1){answers=cleanAnswers(saved.answers);if(BANK.some(c=>c.number===saved.chapter))chapterNumber=saved.chapter;if(['practice','exam'].includes(saved.mode))mode=saved.mode;if(BY_ID.has(saved.currentId))currentId=saved.currentId;}localStorage.setItem(KEY+'-test','1');localStorage.removeItem(KEY+'-test');}catch{storageOK=false;}
+function save(){if(storageOK){try{localStorage.setItem(KEY,JSON.stringify({version:1,answers,chapter:chapterNumber,currentId,mode}));}catch{storageOK=false;}}$('save-status').textContent=storageOK?'يُحفظ تقدمك تلقائيًا في هذا المتصفح.':'التخزين غير متاح؛ سيبقى تقدمك ما دامت الصفحة مفتوحة.';}
+function chapter(){return BANK.find(c=>c.number===chapterNumber);}
+function list(){return visibleQuestions(chapter(),answers,type,wrongOnly);}
+function status(q){const a=answers[q.id];if(!a)return '';if(!a.graded)return 'pending';return a.choice===q.answer?'good':'bad';}
+function renderNav(){$('chapters').innerHTML=BANK.map(c=>{const s=statistics(c.questions,answers);return `<button type="button" class="chapter" data-chapter="${c.number}" aria-current="${c.number===chapterNumber}"><strong>${c.number} · ${escape(c.title)}</strong><small>${s.total} سؤالًا · أجبت ${s.answered} · صحيح ${s.correct}</small></button>`;}).join('');}
+function renderStats(){const c=chapter(),s=statistics(c.questions,answers),g=statistics(ALL,answers);$('chapter-kicker').textContent='المحاضرة '+c.number+' • '+s.total+' سؤالًا';$('chapter-title').textContent=c.title;$('chapter-focus').textContent=c.focus;$('overall-progress').textContent='البنك كاملًا: '+g.answered+' / '+g.total+' إجابة';$('stats').innerHTML=`<div class="stat correct"><b>${s.correct}</b>صحيح</div><div class="stat wrong"><b>${s.wrong}</b>خطأ</div><div class="stat pending"><b>${s.pending}</b>لم يُصحّح بعد</div><div class="stat"><b>${s.unanswered}</b>لم تُجب</div>`;const percent=s.total?s.answered/s.total*100:0;$('progress-bar').style.width=percent+'%';$('progress').setAttribute('aria-valuenow',Math.round(percent));$('mode').value=mode;$('type-filter').value=type;$('wrong-filter').setAttribute('aria-pressed',String(wrongOnly));$('wrong-filter').textContent=wrongOnly?'عرض جميع الأسئلة':'مراجعة الأخطاء فقط';$('mode-note').textContent=mode==='exam'?'وضع الاختبار: غيّر اختياراتك كما تريد قبل التصحيح. تظهر الإجابات والتفسيرات عند عرض النتيجة.':'وضع التدريب: اختر ثم أكّد لتظهر الإجابة الصحيحة والتفسير. بعد التصحيح تُثبّت إجابتك.';}
+function renderQuestion(){const qs=list();let q=qs.find(x=>x.id===currentId)||qs[0];$('empty').hidden=!!q;$('question-content').hidden=!q;if(!q){$('empty').textContent=wrongOnly?'لا توجد أخطاء مصحّحة تطابق هذا الاختيار. اعرض جميع الأسئلة أو غيّر نوعها.':'لا توجد أسئلة بهذا النوع.';return;}currentId=q.id;const a=answers[q.id],i=qs.findIndex(x=>x.id===currentId);$('question-counter').textContent='السؤال '+q.number+' من '+chapter().questions.length+' • '+(q.type==='mc'?'اختيار من متعدد':'صح أو خطأ');$('question-topic').textContent=q.topic;$('question-text').textContent=q.q;$('options').innerHTML=q.options.map((o,j)=>{const selected=a?.choice===j,graded=a?.graded===true;const correct=graded&&j===q.answer;const wrong=graded&&selected&&j!==q.answer;return `<label class="option ${selected?'selected':''} ${correct?'right':''} ${wrong?'wrong':''}"><input type="radio" name="answer" value="${j}" ${selected?'checked':''} ${graded?'disabled':''}><span class="letter">${q.type==='mc'?letters[j]:''}</span><span class="option-text" dir="auto">${escape(o)}</span><span class="mark" aria-hidden="true">${correct?'✓':wrong?'×':''}</span></label>`;}).join('');$('check').hidden=mode==='exam'||a?.graded===true;$('check').disabled=!a;$('choice-status').textContent=a?.graded?'تم تثبيت إجابتك بعد التصحيح.':a?'اختيارك محفوظ.':'اختر إجابة واحدة.';$('feedback').hidden=!a?.graded;if(a?.graded){const correct=a.choice===q.answer;$('feedback').className='feedback '+(correct?'good':'bad');$('feedback').innerHTML=`<b>${correct?'✓ إجابة صحيحة':'× الإجابة تحتاج تصحيحًا'}</b><p>الإجابة الصحيحة: <strong dir="auto">${escape(q.options[q.answer])}</strong></p><p>${escape(q.explanation)}</p>`;}$('source').textContent='المرجع: المحاضرة '+chapterNumber+'، ص '+q.pages+' • '+chapter().file;$('previous').disabled=i===0;$('next').disabled=i===qs.length-1;}
+function renderNumbers(){const qs=list();$('numbers').innerHTML=qs.map(q=>{const st=status(q),sign=st==='good'?'✓':st==='bad'?'×':st==='pending'?'●':'';return `<button type="button" class="qnumber ${st} ${q.id===currentId?'current':''}" data-question="${q.id}" aria-label="السؤال ${q.number}${sign?'، '+(st==='good'?'صحيح':st==='bad'?'خطأ':'بانتظار التصحيح'):''}" ${q.id===currentId?'aria-current="true"':''}>${q.number} ${sign}</button>`;}).join('');}
+function render(){renderNav();renderStats();renderQuestion();renderNumbers();save();}
+function navigateQuestion(id){currentId=id;render();$('question-text').focus({preventScroll:true});window.scrollTo({top:$('question-panel').getBoundingClientRect().top+window.scrollY-18,behavior:'auto'});}
+function chooseChapter(n){chapterNumber=n;currentId=chapter().questions[0].id;wrongOnly=false;type='all';$('results').hidden=true;render();window.scrollTo({top:$('chapter-title').getBoundingClientRect().top+window.scrollY-18,behavior:'auto'});}
+function reviewHTML(c){return `<details><summary>المحاضرة ${c.number}: ${escape(c.title)} — نموذج الإجابة والتفسير</summary>${c.questions.map(q=>{const a=answers[q.id],good=a?.graded&&a.choice===q.answer;let label=!a?'لم تُجب':!a.graded?'لم تُصحّح':good?'✓ صحيح':'× خطأ';return `<div class="review-item"><b>${q.number}. ${escape(q.q)}</b><p class="${a&&!good?'review-error':'sub'}">${label}${a?' — اختيارك: '+escape(q.options[a.choice]):''}</p><p class="review-answer">الإجابة الصحيحة: <b dir="auto">${escape(q.options[q.answer])}</b></p><p>${escape(q.explanation)}</p><span class="source">المحاضرة ${c.number}، ص ${escape(q.pages)}</span></div>`;}).join('')}</details>`;}
+function showResults(all=false){const chapters=all?BANK:[chapter()];const qs=chapters.flatMap(c=>c.questions);grade(qs,answers);const s=statistics(qs,answers);render();$('results-title').textContent=all?'نتيجة البنك كاملًا':'نتيجة المحاضرة '+chapterNumber;const rows=chapters.map(c=>{const x=statistics(c.questions,answers);return `<tr><td>${c.number} · ${escape(c.title)}</td><td>${x.correct}/${x.total}</td><td>${x.wrong}</td><td>${x.unanswered}</td><td>${x.percent}%</td></tr>`;}).join('');$('results-body').innerHTML=`<div class="result-summary"><b>الدرجة الحالية: ${s.correct} من ${s.total} (${s.percent}%)</b><br>أجبت ${s.answered} سؤالًا · ${s.correct} صحيح · ${s.wrong} خطأ · ${s.unanswered} لم تُجب<br>${s.accuracy===null?'لم تُصحّح أي إجابة بعد.':'دقة إجاباتك المصحّحة فقط: '+s.accuracy+'%.'}</div><table class="result-table"><thead><tr><th>المحاضرة</th><th>الدرجة</th><th>خطأ</th><th>لم تُجب</th><th>من الإجمالي</th></tr></thead><tbody>${rows}</tbody></table><p class="note">افتح نموذج الإجابة أسفل كل محاضرة لرؤية التصحيح والتفسير. الأسئلة التي لم تُجب عنها لا تُحسب صحيحة عند عرض حلها.</p>${chapters.map(reviewHTML).join('')}`;$('results').hidden=false;window.scrollTo({top:$('results').getBoundingClientRect().top+window.scrollY-18,behavior:'auto'});save();}
+$('chapters').addEventListener('click',e=>{const b=e.target.closest('[data-chapter]');if(b)chooseChapter(+b.dataset.chapter);});
+$('numbers').addEventListener('click',e=>{const b=e.target.closest('[data-question]');if(b)navigateQuestion(b.dataset.question);});
+$('options').addEventListener('change',e=>{if(e.target.name!=='answer')return;if(setAnswer(answers,currentId,+e.target.value)){render();}});
+$('check').addEventListener('click',()=>{const q=BY_ID.get(currentId);if(q&&answers[q.id]){grade([q],answers);render();}});
+$('previous').addEventListener('click',()=>{const qs=list(),i=qs.findIndex(q=>q.id===currentId);if(i>0)navigateQuestion(qs[i-1].id);});
+$('next').addEventListener('click',()=>{const qs=list(),i=qs.findIndex(q=>q.id===currentId);if(i>=0&&i<qs.length-1)navigateQuestion(qs[i+1].id);});
+$('mode').addEventListener('change',e=>{mode=e.target.value;render();});
+$('type-filter').addEventListener('change',e=>{type=e.target.value;render();});
+$('wrong-filter').addEventListener('click',()=>{wrongOnly=!wrongOnly;render();});
+$('chapter-results').addEventListener('click',()=>showResults(false));
+$('all-results').addEventListener('click',()=>showResults(true));
+$('close-results').addEventListener('click',()=>{$('results').hidden=true;window.scrollTo({top:$('chapter-title').getBoundingClientRect().top+window.scrollY-18,behavior:'auto'});});
+$('reset-current').addEventListener('click',()=>{if(!window.confirm('هل تريد مسح إجابات المحاضرة '+chapterNumber+' فقط وبدء محاولة جديدة؟'))return;resetChapter(chapter(),answers);currentId=chapter().questions[0].id;wrongOnly=false;$('results').hidden=true;render();});
+render();
+})();
+}
+</script></body></html>
